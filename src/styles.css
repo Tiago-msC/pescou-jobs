@@ -1,0 +1,14 @@
+:root {
+  --base-color-primary: #51A1C9;
+  --base-color-secondary: #1E1E1E;
+  --base-color-shape: #FFFFFF;
+  --base-color-white: #FFFFFF;
+  --base-text-color-primary: #000000;
+  --base-text-color-secondary: #777777;
+  --base-border-color-primary: #CECECE;
+  --base-shadow-primary: 3px 3px 4px 0px rgba(0, 0, 0, 0.08);
+  --base-shadow-secondary: 2px 2px 12px 1px rgba(0, 0, 0, 0.25);
+  --base-color-gray: #D9D9D9;
+  --base-color-light-gray: #CECECE;
+  --base-color-dark-gray: #777777;
+}
