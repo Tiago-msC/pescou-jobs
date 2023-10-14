@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'Popins-Regular';
+	src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: url('/fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+:root {
+  --theme-color-primary: #51A1C9;
+  --theme-color-secondary: #1E1E1E;
+  --theme-color-shape: #FFFFFF;
+  --theme-color-white: #FFFFFF;
+  --theme-text-color-primary: #000000;
+  --theme-text-color-secondary: #777777;
+  --theme-border-color-primary: #CECECE;
+  --theme-shadow-primary: 3px 3px 4px 0px rgba(0, 0, 0, 0.08);
+  --theme-shadow-secondary: 2px 2px 12px 1px rgba(0, 0, 0, 0.25);
+  --theme-color-gray: #D9D9D9;
+  --theme-color-light-gray: #CECECE;
+  --theme-color-dark-gray: #777777;
+  --theme-typography-font-family-regular: 'Popins-Regular';
+  --theme-typography-font-family-medium: 'Poppins-Medium';
+  --theme-typography-font-family-semibold: 'Poppins-SemiBold';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--theme-typography-font-family-regular);
+}
