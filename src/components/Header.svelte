@@ -1,5 +1,7 @@
 <script>
     import logo from "$lib/images/pescoujobs-logo.svg"
+  import Button from "./Button.svelte";
+  import account from "$lib/images/icons/account.svg"
 </script>
 
 <header>
@@ -11,7 +13,7 @@
                 <li>Ajuda</li>
                 <li>Cadastrar</li>
             </ul>
-            <button>Entrar</button>
+            <Button text="Entrar" type="outline" iconLeft={account}></Button>
         </div>
     </nav>
 </header>
@@ -36,6 +38,7 @@
     }
     .container-nav{
         display: flex;
+        align-items: center;
     }
     .pescoujobs-logo{
         height: 45px;
