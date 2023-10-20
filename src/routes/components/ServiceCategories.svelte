@@ -9,11 +9,9 @@
     }
     
     ul{
-        display: flex;
-        flex-wrap: wrap;
-        border-top: 1px solid #5F5F5F;
-        border-bottom: 1px solid #5F5F5F;
-        justify-content: space-between;    
+        border-top: 1px solid #c9c9c9;
+        border-bottom: 1px solid #c9c9c9;
+        white-space: nowrap;
     }
 
     li{
@@ -25,16 +23,18 @@
 
     a{
         padding: 5px;
-        color: rgb(0, 0, 0);
+        color: #5d5d5d;
         font-weight: bolder;
         text-decoration: none;
 
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 27px;
+        font-size: 1.3vw;
+        line-height: 4vw;
     }
+    
+    
 </style>
 
 <body>
