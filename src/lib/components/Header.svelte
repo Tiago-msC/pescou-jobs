@@ -1,7 +1,7 @@
 <script>
     import logo from "$lib/images/pescoujobs-logo.svg"
-  import Button from "./Button.svelte";
-  import account from "$lib/images/icons/account.svg"
+    import Button from "./Button.svelte";
+    import account from "$lib/images/icons/account.svg"
 </script>
 
 <header>
