@@ -1,10 +1,12 @@
 <script lang="ts">
     import Header from '$lib/components/Header.svelte';
-    import SlideButton from '$lib/components/SlideButton.svelte';
+  import SwitchButton from '$lib/components/SwitchButton.svelte';
+    import SlideButton from '$lib/components/SwitchButton.svelte';
 </script>
-<SlideButton>
-    <slot/>
-</SlideButton>
+
+<!-- <SwitchButton>
+    
+</SwitchButton> -->
 <Header>
     <slot/>
 </Header>
