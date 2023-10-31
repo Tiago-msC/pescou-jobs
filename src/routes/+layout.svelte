@@ -1,12 +1,10 @@
 <script lang="ts">
     import Header from '$lib/components/Header.svelte';
-  import SwitchButton from '$lib/components/SwitchButton.svelte';
-    import SlideButton from '$lib/components/SwitchButton.svelte';
+    import SwitchButton from '$lib/components/SwitchButton.svelte';
+    import InputServiceLocation from '$lib/components/input-service-location.svelte';
 </script>
 
-<!-- <SwitchButton>
-    
-</SwitchButton> -->
-<Header>
+<InputServiceLocation>
     <slot/>
-</Header>
+</InputServiceLocation>
+
