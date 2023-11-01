@@ -1,6 +1,11 @@
 <div class="input">
-    <img src="" alt="icone" class="icone">
-    <form action="label" class = "formu">o</form>
+    <form action="" class = "formu">
+        <img src="" alt="icone" class="icone">
+        <label for="nome-completo">Nome completo</label>
+        <div class="input-container">
+            <input name="nome-completo" placeholder="Insira seu nome completo"type="email" required />
+        </div>
+    </form>
 </div>
 
 <style>
