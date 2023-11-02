@@ -55,7 +55,7 @@
     input{
         background-color: #ffffff;
         border: none;
-        margin-left: 40px;
+        margin-left: 35px;
         width: 80%;
         outline: none;
     }
