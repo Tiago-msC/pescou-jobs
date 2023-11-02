@@ -1,7 +1,7 @@
 <script>
     import logo from "$lib/assets/icons/lamp-icon.svg";
 </script>
-<div class="input">
+<div class="caixa-formulario">
     <form action="" class="formu">
         <div class="icon-and-label">
             <img src={logo} alt="icone" class="icone">
@@ -14,31 +14,46 @@
 </div>
 
 <style>
-    .input {
-        display: flex;
-        /* flex-direction: column; */
+    .caixa-formulario {
+        width: 710px;
+        height: 87px;
+        flex-direction: column;
         margin: 20px;
-        padding: 20px;
+        padding: 16px 75px 16px 24px ;
         align-items: center;
         border: 1.2px solid #CECECE;
         background: #FFF;
     }
+    .input-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input{
+        background-color: #ffffff;
+        border: none;
+        margin-left: 40px;
+        width: 80%;
+        outline: none;
+    }
+
 
     .icon-and-label {
+        font-weight: 600;
         display: flex;
         align-items: center;
-        margin-bottom: 10px; 
+        margin-bottom: 8px; 
     }
 
     label {
-        margin-left: 10px; 
+        margin-left: 11.8px; 
     }
 
     .icone {
-        margin-right: 10px;
+        
     }
 
     .formu {
-       
+      
     }
 </style>
