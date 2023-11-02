@@ -16,10 +16,10 @@
     <form action="" class="formu">
         <div class="icon-and-label">
             <img src={logo} alt="icone" class="icone">
-            <label for="nome-completo">O que você precisa encontrar?</label>
+            <label for="nome-completo">Onde você precisa dos serviços?</label>
         </div>
         <div class="input-container">
-            <input name="nome-completo" placeholder="Digite o serviço desejado (ex: Eletricista, Encanador, Babá)..." type="email" required />
+            <input name="nome-completo" placeholder="Informe a sua localização (ex: Bairro, Cidade, CEP)..." type="email" required />
         </div>
     </form>
 </div>
