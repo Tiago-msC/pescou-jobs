@@ -72,11 +72,11 @@
         margin-left: 11.8px; 
     }
 
-    .icone {
+    /* .icone {
         
     }
 
     .formu {
       
-    }
+    } */
 </style>

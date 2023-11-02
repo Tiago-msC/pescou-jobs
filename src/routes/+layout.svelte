@@ -7,11 +7,14 @@
 
 
 <Header>
-    
+    <slot />
 </Header>
 
 <InputServiceLocation>
+    <slot />
 </InputServiceLocation>
 
 <SwitchButton> 
+    <slot />
 </SwitchButton>
+ 
