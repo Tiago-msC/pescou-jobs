@@ -3,25 +3,34 @@
     import Header from '$lib/components/Header.svelte';
     import SwitchButton from '$lib/components/SwitchButton.svelte';
     import InputServiceLocation from '$lib/components/input-service-location.svelte';
+
 </script>
 
 
 <Header>
     <slot />
 </Header>
-<div class="servicelocation">
-    <InputServiceLocation>
-        <slot />
-    </InputServiceLocation>
+
+<div class="corpo">
+    
+    
+    <div class="servicelocation">
+        <InputServiceLocation>
+            <slot />
+        </InputServiceLocation>
+    </div>
+    
+    
 </div>
 
-<SwitchButton> 
-    <slot />
-</SwitchButton>
 
-<style>
-    .servicelocation{
-        padding: auto;
-    }
-    </style>
+    <style>
+        .corpo{
+            padding:   20px 329px 20px 209px;
+            background-color: var(--theme-color-primary);
+        }
+        .servicelocation{
+            padding: auto;
+        }
+        </style>
  
