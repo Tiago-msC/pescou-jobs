@@ -9,12 +9,19 @@
 <Header>
     <slot />
 </Header>
-
-<InputServiceLocation>
-    <slot />
-</InputServiceLocation>
+<div class="servicelocation">
+    <InputServiceLocation>
+        <slot />
+    </InputServiceLocation>
+</div>
 
 <SwitchButton> 
     <slot />
 </SwitchButton>
+
+<style>
+    .servicelocation{
+        padding: auto;
+    }
+    </style>
  
