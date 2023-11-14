@@ -8,7 +8,7 @@
             <label for="nome-completo">O que você precisa encontrar?</label>
         </div>
         <div class="input-container">
-            <input name="nome-completo" placeholder="Digite o serviço desejado (ex: Eletricista, Encanador, Babá)..." type="email" required />
+            <input name="nome-completo" placeholder="Digite o serviço desejado (ex: Eletricista, Encanador, Babá)..." type="text" required />
         </div>
     </form>
 </div>
@@ -19,7 +19,7 @@
             <label for="nome-completo">Onde você precisa dos serviços?</label>
         </div>
         <div class="input-container">
-            <input name="nome-completo" placeholder="Informe a sua localização (ex: Bairro, Cidade, CEP)..." type="email" required />
+            <input name="nome-completo" placeholder="Informe a sua localização (ex: Bairro, Cidade, CEP)..." type="text" required />
         </div>
     </form>
 </div>

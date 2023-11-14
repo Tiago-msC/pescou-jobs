@@ -50,9 +50,27 @@
     margin-right: 24px;
   }
   li {
-    list-style: none;
-    margin-left: 34px;
+  list-style: none;
+  margin-left: 34px;
+  position: relative; 
   }
+
+  li::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--theme-text-color-primary);
+    transition: width 0.4s; 
+  }
+
+
+  li:hover::after {
+    width: 100%; 
+  }
+
   .container-nav {
     display: flex;
     align-items: center;
@@ -69,7 +87,7 @@
   a {
     text-decoration: none;
     color: var(--theme-text-color-primary);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 500;
   }
 
