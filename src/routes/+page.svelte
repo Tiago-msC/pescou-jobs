@@ -4,6 +4,8 @@
     import Header from '$lib/components/Header.svelte';
     import arrowicon from '$lib/assets/icons/arrow-right.svg';
     import InputServiceLocation from '$lib/components/input-service-location.svelte';
+    import backgroundImage from '$lib/assets/foto-back.png';
+
 </script>
 
 <svelte:head>
@@ -13,7 +15,7 @@
 
 <Header />
 
-<div class="background">
+<div class="background" style="background-image: url({backgroundImage})">
   <div class="corpo">
       <div class="header-bloco">
           <div class="texto-head" >
@@ -21,7 +23,7 @@
                   <span style="font-size: 48px; font-weight: bolder; color:var(--theme-color-secondary)">Encontre profissionais Qualificados</span>
               </div>
               <div class="subheader">
-                  <span >Busque por <b style="color: var(--theme-color-secondary)">serviço</b> e  <b style="color: var(--theme-color-secondary)">profissionais</b> confiáveis perto de você.</span>
+                  <span >Busque p/ por <b style="color: var(--theme-color-secondary)">serviço</b> e  <b style="color: var(--theme-color-secondary)">profissionais</b> confiáveis perto de você.</span>
               </div>
               <div class="servicelocation">
                   <InputServiceLocation />
@@ -64,7 +66,7 @@
 
       }
       .background{
-          background-image: url('src/lib/assets/foto-back.png');
+          /* background-image: url({backgroundImage}); */
           padding: 80px 100px 100px 100px;
           background-position: -25vw;
           background-repeat: no-repeat;
