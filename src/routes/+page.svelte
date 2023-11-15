@@ -2,16 +2,18 @@
 
     import Button from '$lib/components/Button.svelte';
     import Header from '$lib/components/Header.svelte';
-    import SwitchButton from '$lib/components/SwitchButton.svelte';
     import arrowicon from '$lib/assets/icons/arrow-right.svg';
     import InputServiceLocation from '$lib/components/input-service-location.svelte';
-    import { navigating } from '$app/stores';
-
 </script>
 
-<Header></Header>
+<svelte:head>
+	<title>PescouJobs - Encontre profissionais Qualificados</title>
+	<meta name="description" content="Encontre profissionais Qualificados">
+</svelte:head>
+
+<Header />
+
 <div class="background">
-    
   <div class="corpo">
       <div class="header-bloco">
           <div class="texto-head" >
@@ -22,9 +24,7 @@
                   <span >Busque por <b style="color: var(--theme-color-secondary)">serviço</b> e  <b style="color: var(--theme-color-secondary)">profissionais</b> confiáveis perto de você.</span>
               </div>
               <div class="servicelocation">
-                  <InputServiceLocation>
-                      <slot />
-                  </InputServiceLocation>
+                  <InputServiceLocation />
               </div>
               
           </div>
@@ -64,10 +64,9 @@
 
       }
       .background{
-
           background-image: url(src/lib/assets/foto-back.png);
           padding: 80px 100px 100px 100px;
-          background-position: -100px;
+          background-position: -25vw;
           background-repeat: no-repeat;
           background-size: cover; 
 

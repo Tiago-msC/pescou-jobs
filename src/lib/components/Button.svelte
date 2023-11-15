@@ -12,9 +12,21 @@
   export let notClickAnimation: boolean = false;
   export let onClick: () => void = () => {};
 
-  let isProcessing: boolean = false;
-
+  let isProcessing: boolean = processing;
+  
+  $: isProcessing = processing;
+  
   function handleClick() {
+    
+    // if (processing) {
+      //   isProcessing = true;
+    //   // setTimeout(() => {
+    //   //   isProcessing = false;
+    //   // }, 1000);
+    // } else {
+    //   isProcessing = false;
+    // }
+
     if (disabled || isProcessing) {
       return;
     }
@@ -22,9 +34,11 @@
     onClick();
     if (processing) {
       isProcessing = true;
-      setTimeout(() => {
-        isProcessing = false;
-      }, 1000);
+      // setTimeout(() => {
+      //   isProcessing = false;
+      // }, 1000);
+    } else {
+      isProcessing = false;
     }
   }
 
