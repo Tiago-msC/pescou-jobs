@@ -70,6 +70,7 @@
   div.texto-head > span {
     font-size: 2.5rem; 
     font-weight: 600; 
+    line-height: 3.2rem;
     color: var(--theme-color-secondary)
   }
   .corpo {
@@ -111,6 +112,7 @@
         /* width: 100%; */
         border-radius: 0px;
         box-shadow: none;
+        padding: 24px 16px;
     }
   }
 
@@ -120,6 +122,11 @@
         width: 100%;
         height: 250px;
         object-fit: cover;
+    }
+
+    div.texto-head > span {
+        font-size: 2rem;
+        line-height: 2.7rem;
     }
 
     .background {
