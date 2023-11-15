@@ -2,9 +2,7 @@
     
 </script>
 
-<main>
-    <p style="">tegste22</p>
-</main>
+<p>tegste22</p>
 
 
 

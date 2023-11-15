@@ -64,7 +64,7 @@
 
       }
       .background{
-          background-image: url(src/lib/assets/foto-back.png);
+          background-image: url('src/lib/assets/foto-back.png');
           padding: 80px 100px 100px 100px;
           background-position: -25vw;
           background-repeat: no-repeat;
