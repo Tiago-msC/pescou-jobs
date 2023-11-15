@@ -14,12 +14,12 @@
 
 
 
-<!-- <main>
+<main>
     <slot />
-</main> -->
-<Card>
+</main>
+<!-- <Card>
     
-</Card>
+</Card> -->
 
 
  

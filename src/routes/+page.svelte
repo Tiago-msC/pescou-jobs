@@ -29,7 +29,7 @@
               
           </div>
 
-          <a href="./Listagem" style="text-decoration: none;"><div class="button-finder" style="width: 710px; ">
+          <a href="./listagem" style="text-decoration: none;"><div class="button-finder" style="width: 710px; ">
               <Button
               iconRight={arrowicon}
               expended
