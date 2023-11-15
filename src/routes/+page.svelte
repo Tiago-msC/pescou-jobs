@@ -4,6 +4,11 @@
   import arrowicon from "$lib/assets/icons/arrow-right.svg";
   import InputServiceLocation from "$lib/components/input-service-location.svelte";
   import backgroundImage from "$lib/assets/foto-back.png";
+
+  const handleNavigateProfessionals = () => {
+    window.location.href = "/profissionais";
+  };
+
 </script>
 
 <svelte:head>
@@ -36,16 +41,16 @@
         </div>
       </div>
 
-      <a href="./Listagem" style="text-decoration: none;"
-        ><div class="button-finder">
+        <div class="button-finder">
           <Button
             iconRight={arrowicon}
             expended
             text="Buscar profissionais"
             type="primary"
+            onClick={handleNavigateProfessionals}
           />
         </div>
-      </a>
+  
     </div>
   </div>
 </div>
