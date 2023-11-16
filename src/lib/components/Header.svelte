@@ -3,6 +3,11 @@
   import logoRetractable from "$lib/assets/icons/pescoujobs-logo-retractable.svg";
   import Button from "./Button.svelte";
   import account from "$lib/assets/icons/account.svg";
+
+  const handleNavigateLogin = () => {
+    window.location.href = "/auth/login";
+  };
+
 </script>
 
 <header>
@@ -20,6 +25,7 @@
         notClickAnimation
         type="outline"
         iconLeft={account}
+        onClick={handleNavigateLogin}
       />
     </div>
   </nav>

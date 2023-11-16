@@ -5,55 +5,52 @@
     <form action="" class="formu">
         <div class="icon-and-label">
             <img src={logo} alt="icone" class="icone">
-            <label for="nome-completo">O que você precisa encontrar?</label>
+            <label for="servico">O que você precisa encontrar?</label>
         </div>
         <div class="input-container">
-            <input name="nome-completo" placeholder="Digite o serviço desejado (ex: Eletricista, Encanador, Babá)..." type="text" required />
+            <input name="servico" placeholder="Digite o serviço desejado (ex: Eletricista, Encanador, Babá)..." type="text" required />
         </div>
     </form>
 </div>
-<div class="caixa-formulario2">
-    <form action="" class="formu">
+<div class="caixa-formulario">
+    <form class="formu">
         <div class="icon-and-label">
             <img src={logo} alt="icone" class="icone">
-            <label for="nome-completo">Onde você precisa dos serviços?</label>
+            <label for="localizacao">Onde você precisa dos serviços?</label>
         </div>
         <div class="input-container">
-            <input name="nome-completo" placeholder="Informe a sua localização (ex: Bairro, Cidade, CEP)..." type="text" required />
+            <input name="localizacao" placeholder="Informe a sua localização (ex: Bairro, Cidade, CEP)..." type="text" required />
         </div>
     </form>
 </div>
 
 <style>
     .caixa-formulario {
-        width: 710px;
-        height: 87px;
+        width: 100%;
         flex-direction: column;
-        margin: 20px 20px 0px 20px;
+        /* margin: 20px 20px 0px 0px; */
+        
         padding: 16px 75px 16px 24px ;
         align-items: center;
-        border: 1.2px solid #CECECE;
-        background: #FFF;
-
+        border: 1.2px solid var(--theme-color-light-gray);
+        border-collapse: collapse;
+        background: var(--theme-color-white);
     }
-    .caixa-formulario2 {
-        width: 710px;
-        height: 87px;
-        flex-direction: column;
-        margin: 0px 0px 20px 20px;
-        padding: 16px 75px 16px 24px ;
-        align-items: center;
-        border: 1.2px solid #CECECE;
-        background: #FFF;
 
+    .icone {
+        height: 24px;
+    }
+    
+    .caixa-formulario + .caixa-formulario {
+        border-collapse: collapse;
+        margin-bottom: 20px;
     }
     .input-container {
         display: flex;
         flex-direction: column;
     }
-    
     input{
-        background-color: #ffffff;
+        background-color: var(--theme-color-white);
         border: none;
         margin-left: 35px;
         width: 80%;
@@ -69,14 +66,8 @@
     }
 
     label {
-        margin-left: 11.8px; 
+        margin-left: 11.8px;
+        font-size: 0.9rem;
+        color: var(--theme-color-secondary);
     }
-
-    /* .icone {
-        
-    }
-
-    .formu {
-      
-    } */
 </style>
