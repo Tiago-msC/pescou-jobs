@@ -41,12 +41,13 @@
         </div>
       </div>
 
-          <a href="./listagem" style="text-decoration: none;"><div class="button-finder" style="width: 710px; ">
-              <Button
-              iconRight={arrowicon}
-              expended
-              text="Buscar profissionais"
-              type="primary"
+        <div class="button-finder">
+          <Button
+            iconRight={arrowicon}
+            expended
+            text="Buscar profissionais"
+            type="primary"
+            onClick={handleNavigateProfessionals}
           />
         </div>
   
