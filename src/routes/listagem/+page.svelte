@@ -4,7 +4,6 @@
     import Header from '$lib/components/Header.svelte'
     import arrow_right from '$lib/assets/icons/slight-arrow-right.svg'
     import DropdownMenu from '$lib/components/Dropdown-menu.svelte';
-
     const cards = [
     { id: 1, title: 'Card 1' },
     { id: 2, title: 'Card 2' },
@@ -22,12 +21,9 @@
         <img src={arrow_right} alt="Seta p/ direita">
         <span>Pescando um eletricista em Imbiribeira, Recife - PE</span>
     </div>
-    <div class="profissional-procurado">
-        <span class="header-profissional">Eletricista</span>
-        <span class="texto-profissional">Encontre eletricistas qualificados e confiáveis para resolver seus problemas elétricos. Profissionais prontos para atender às suas necessidades de instalação, reparo e manutenção elétrica.</span>
-    </div>
-    <div class="filtros-profissionais">
-        <DropdownMenu/>
+    <div class="profissional_procurado">
+        <span>Eletricista</span>
+        <span>Encontre eletricistas qualificados e confiáveis para resolver seus problemas elétricos. Profissionais prontos para atender às suas necessidades de instalação, reparo e manutenção elétrica.</span>
     </div>
 </div>
 
@@ -40,26 +36,6 @@
   
 
 <style>
-    .texto-profissional{
-        color: var(--theme-color-dark-gray);
-        font-size: 20px;
-        font-weight: 400;
-
-    }
-    .header-profissional{
-        color: var(--theme-text-color-primary);
-        font-size: 32px;
-        font-weight: 600;
-
-    }
-    .profissional-procurado{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-        align-self: stretch;
-    }
-     
     .inicio{
         color: var(--theme-text-color-secondary) ;
     }

@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-  <title>PescouJobs - Encontre profissionais Qualificados</title>
+  <title>PescouJobs - Encontre Profissionais Qualificados</title>
   <meta name="description" content="Encontre profissionais Qualificados" />
 </svelte:head>
 
@@ -25,7 +25,7 @@
     <div class="header-bloco">
       <div class="texto-head">
         <span
-          >Encontre profissionais Qualificados</span
+          >Encontre Profissionais Qualificados</span
         >
         <div class="subheader">
           <span
