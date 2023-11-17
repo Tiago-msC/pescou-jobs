@@ -27,7 +27,7 @@
    
    .dropdown{
     display: flex;
-    padding: 13px 16px;
+    padding: 4px 16px;
     align-items: center;
     gap: 10px;
     border: 1px solid var(--theme-color-light-gray);
