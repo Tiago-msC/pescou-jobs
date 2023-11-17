@@ -3,6 +3,7 @@
     import Card from '$lib/components/Card.svelte'
     import Header from '$lib/components/Header.svelte'
     import arrow_right from '$lib/assets/icons/slight-arrow-right.svg'
+    import DropdownMenu from '$lib/components/Dropdown-menu.svelte';
     const cards = [
     { id: 1, title: 'Card 1' },
     { id: 2, title: 'Card 2' },
@@ -21,7 +22,8 @@
         <span>Pescando um eletricista em Imbiribeira, Recife - PE</span>
     </div>
     <div class="profissional_procurado">
-        
+        <span>Eletricista</span>
+        <span>Encontre eletricistas qualificados e confiáveis para resolver seus problemas elétricos. Profissionais prontos para atender às suas necessidades de instalação, reparo e manutenção elétrica.</span>
     </div>
 </div>
 
