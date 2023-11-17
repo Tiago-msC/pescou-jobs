@@ -20,12 +20,20 @@
         border-bottom: 1px solid var(--theme-color-light-gray);
         background: var(--theme-text-color-tertiary);
         flex-wrap: wrap; 
-    }
-
-    li{
-        display: inline;   
+        
     }
     
+    li{
+        display: inline;   
+        transition: border-bottom 0.3s ease-in;
+        border-bottom: 1px solid var(--theme-color-white);
+    }
+
+
+    li:hover{
+        border-bottom: 1px solid var(--theme-color-secondary);
+    }
+
     a{
         padding: 5px;
         color: var(--theme-text-color-primary);
@@ -34,7 +42,14 @@
         font-size: 1.0rem;
     }
 
+    @media screen and (max-width:1000px){
 
+        ul{
+            grid-template-rows: repeat(5,1fr);
+            align-items: center;
+            text-align: center;
+        }
+    }
     @media (max-width: 600px) {
         a {
             font-size: 0.8rem; 

@@ -1,7 +1,7 @@
 <script>
     import '../../styles.css';
     import Card from '$lib/components/Card.svelte'
-    import Header from '$lib/components/Header.svelte'
+    import HeaderSearcher from '$lib/components/Header-Searcher.svelte';
     import arrow_right from '$lib/assets/icons/slight-arrow-right.svg'
     import DropdownFiltros from '$lib/components/Dropdown-Filtros.svelte';
     import ServiceCategories from '$lib/components/ServiceCategories.svelte'
@@ -14,7 +14,7 @@
     
 </script>
 
-<Header></Header>
+<HeaderSearcher></HeaderSearcher>
 <ServiceCategories/>
 
 
@@ -49,7 +49,7 @@
 <style>
     .profissionais-achados{
         display: flex;
-        font-size: 1.125rem;
+        font-size: 1.3rem;
         font-weight: 500;
         color: var(--theme-color-dark-gray);
         padding: 30px  0px  44px 134px ;
@@ -67,7 +67,7 @@
     }
     .header-profissional{
         color: var(--theme-text-color-primary);
-        font-size: 32px;
+        font-size: 3rem;
         font-weight: 600;
 
     }
@@ -125,13 +125,14 @@
     
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 
     .filtros-profissionais{
         padding: 20px;
         display: grid;
         margin-right: 200px;
         grid-template-columns: repeat(2, 1fr);
+        
 
     }
     
@@ -146,7 +147,8 @@
         justify-content: center;
     }
     .lista-de-cards{
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         align-items: center;
         padding: 20px;
     }
