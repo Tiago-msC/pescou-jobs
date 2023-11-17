@@ -83,7 +83,7 @@
     
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     
     .dropdown:hover .menu{
     z-index: 1; 
