@@ -23,6 +23,7 @@
 </div>
 <style>
     input{
+        width: 290px;
         background-color: var(--theme-color-white);
         border: none;
         outline: none;
