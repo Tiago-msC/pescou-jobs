@@ -3,14 +3,16 @@
 <body>
     <nav >
         <ul >
-            <li class="dropdown">
-                <a href='#'>Para prestadores <i class="fas fa-chevron-down" style="color: #a9a9a9; font-size: 12;"></i></a>
-                <div class="menu">
-                    <a href="#">Área do prestador </a> 
-                    <a href="#">Torne-se um prestador</a> 
-                </div>
-            </li>
-
+            <div class="dropdown-filtro">
+                <li class="dropdown">
+                    <a href='#'>Para prestadores <i class="fas fa-chevron-down" style="color: #a9a9a9; font-size: 12;"></i></a>
+                    <img src="" alt="" class="downarrow">
+                    <div class="menu">
+                        <a href="#">Área do prestador </a> 
+                        <a href="#">Torne-se um prestador</a> 
+                    </div>
+                </li>
+            </div>
         </ul>
     </nav>
 </body>
