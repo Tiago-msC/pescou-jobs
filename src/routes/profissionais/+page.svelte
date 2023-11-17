@@ -107,4 +107,60 @@
         padding: 20px;
         /* justify-content: space-between; */
     }
+
+    @media screen and (max-width: 600px) {
+    .corpo-descricao, .bloco-inferior{
+        padding: 0 10px;
+    }
+    .lista-de-cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-profissional{
+        font-size: 10px;
+    }
+    .texto-profissional{
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+
+    .filtros-profissionais{
+        padding: 20px;
+        display: grid;
+        margin-right: 200px;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    
+    .corpo-descricao, .bloco-inferior{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .profissionais-achados{
+        font-size: 1.5rem;
+        padding: 30px;
+        padding-bottom: 15px;
+        justify-content: center;
+    }
+    .lista-de-cards{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .header-profissional{
+        font-size: 52px;
+    }
+    .texto-profissional{
+        font-size: 18px;
+    }
+    .filtros-profissionais{
+        padding-left: 0px;
+        padding-right: 50px;
+    }
+}
+    
 </style>

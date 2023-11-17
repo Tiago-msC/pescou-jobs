@@ -10,7 +10,7 @@
 
 <div class="corpo-card">
     <div class="imagem-banner">
-        <img src={banner} alt="Banner">
+        <img src={banner} alt="Banner" class="imagem-banner2">
     </div>
     <div class="head-verified">
         <img src={imagem_perfil} alt="Foto de perfil">
@@ -28,7 +28,7 @@
     </div>
     <div class="tag_area_price">
         <div class="tag_area">
-            <span style="font-size:14px; font-weight:600">Eletricista</span>
+            <span style="font-size:0.875rem; font-weight:600">Eletricista</span>
         </div>
         <span style="font-weight: 600;">A partir de R$ 50</span>
     </div>
@@ -73,7 +73,7 @@
     }
     .nome-prestador{
         color: #1E1E1E;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 600;
      }
     .nome-verified{
@@ -100,4 +100,40 @@
         background: #FFF;
         box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.08);
             }
+
+
+
+        @media screen and (max-width: 800px) {
+            .corpo-card{
+                width: 100%;
+                padding: 20px 15px;
+            }
+            
+            .nome-prestador{
+                font-size: 16px;
+            }
+            .imagem-banner2{
+                width: 100%;
+            }
+            .imagem-banner{
+                width: 100%;
+            }
+        }
+        
+        
+        @media screen and (max-width: 600px) {
+            .imagem-banner2{
+                width: 100%;
+            }
+            .imagem-banner{
+                width: 100%;
+            }
+            .corpo-card{
+                width: 100%;
+                padding: 15px 10px;
+            }
+            .nome-prestador{
+                font-size: 16px;
+            }
+        }
 </style>
