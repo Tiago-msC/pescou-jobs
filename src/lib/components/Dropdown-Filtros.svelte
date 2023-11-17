@@ -1,4 +1,4 @@
-<title>DropDown Menu</title>
+<title>Listagem de Profissionais</title>
 <script lang="ts">
     export let text: string = "";
     export let text1: string = "";
@@ -11,10 +11,10 @@
         <div class="dropdown-filtro">
             <ul >
                 <li class="dropdown">
-                    <a href='#'><b>{text}</b> <i class="fas fa-chevron-down" style="color: #a9a9a9; font-size: 12;"></i></a>
+                    <a href='/'><b>{text}</b> <i class="fas fa-chevron-down" style="color: #a9a9a9; font-size: 12;"></i></a>
                     <div class="menu">
-                        <a href="#">{text1}</a> 
-                        <a href="#">{text2}</a> 
+                        <a href="/ ">{text1}</a> 
+                        <a href="/">{text2}</a> 
                     </div>
                     <img src={downarrow} alt="">
                 </li>

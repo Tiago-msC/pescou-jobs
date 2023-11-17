@@ -64,9 +64,9 @@
   li::after {
     content: "";
     position: absolute;
-    bottom: -1px;
     left: 0;
     width: 0;
+    bottom: -1px;
     height: 1px;
     background-color: var(--theme-text-color-primary);
     transition: width 0.4s; 

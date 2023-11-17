@@ -1,5 +1,3 @@
-<title>ServiceCategories</title>
-
 <script>
     import '../../styles.css'
 </script>
