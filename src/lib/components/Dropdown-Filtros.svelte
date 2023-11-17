@@ -11,7 +11,7 @@
         <div class="dropdown-filtro">
             <ul >
                 <li class="dropdown">
-                    <a href='/'><b>{text}</b> <i class="fas fa-chevron-down" style="color: #a9a9a9; font-size: 12;"></i></a>
+                    <a href='/' class="head-dropdown"><b>{text}</b></a>
                     <div class="menu">
                         <a href="/ ">{text1}</a> 
                         <a href="/">{text2}</a> 
@@ -27,9 +27,10 @@
    
    .dropdown{
     display: flex;
+    flex-direction: row;
     padding: 4px 16px;
-    align-items: center;
     gap: 10px;
+    align-items: center;
     border: 1px solid var(--theme-color-light-gray);
     background: var(--theme-color-white);
     position: relative;
@@ -41,13 +42,33 @@
     
 }
 
-.dropdown a{
-    color:black;
+.head-dropdown{
+    
+    color:var(--theme-font-primary);
     text-decoration: none;
     padding-right: 30;
     text-align: justify;
     display: block;
     padding: 10px;
+
+}
+
+.dropdown .menu a{
+
+    border: none;
+    padding: 5px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    text-align: justify;
+    border-bottom: 1px solid var(--theme-color-white);
+    color:var(--theme-font-primary);
+    display: block;
+    text-decoration: none;
+    transition: border-bottom 0.3s ease-in;
+
+}
+.dropdown .menu a:hover{
+    border-bottom: 1px solid var(--theme-color-secondary);
 }
 
 .menu{
@@ -58,6 +79,38 @@
     top: 100%; 
     left: 0; 
     width: 100%;
+    text-decoration: none;
     
 }
-    </style>
+
+@media screen and (max-width: 800px) {
+    
+    .dropdown:hover .menu{
+    z-index: 1; 
+
+}
+    .dropdown{
+        text-wrap: nowrap;
+        
+
+    }
+    .head-dropdown, .dropdown .menu a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dropdown:hover .menu{
+    z-index: 1; 
+
+}
+    .dropdown{
+        text-wrap: nowrap;
+        margin: auto;
+        
+    }
+    .head-dropdown, .dropdown .menu a {
+        font-size: 20px;
+    }
+}
+</style>
