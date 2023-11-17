@@ -1,5 +1,6 @@
 <script>
     import logo from "$lib/assets/icons/lamp-icon.svg";
+    import pinlocalizacao from "$lib/assets/icons/pin-localizacao.svg";
 </script>
 <div class="caixa-formulario">
     <form action="" class="formu">
@@ -15,7 +16,7 @@
 <div class="caixa-formulario">
     <form class="formu">
         <div class="icon-and-label">
-            <img src={logo} alt="icone" class="icone">
+            <img src={pinlocalizacao} alt="icone" class="icone">
             <label for="localizacao">Onde você precisa dos serviços?</label>
         </div>
         <div class="input-container">

@@ -13,7 +13,7 @@
 <header>
   <!-- <img src={logoRetractable} alt="Logo PescouJobs" class="pescoujobs-logo-retractable"/> -->
   <nav id="desktop-menu">
-    <img src={logo} alt="Logo PescouJobs" class="pescoujobs-logo" />
+    <a href="/"><img src={logo} alt="Logo PescouJobs" class="pescoujobs-logo" /></a>
     <div class="container-nav">
       <ul>
         <li><a href="/">Para prestadores</a></li>

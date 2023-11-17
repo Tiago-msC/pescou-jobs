@@ -33,7 +33,7 @@
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: #FFFFFF;
+    background-color: var(--theme-text-color-tertiary);
     -webkit-transition: .4s;
     transition: .4s;
 }
