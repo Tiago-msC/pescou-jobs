@@ -22,7 +22,7 @@
         border: none;
         outline: none;
         align-items: center;
-        width: 220px;
+        width: 280px;
     }
     .icon-and-label{
         margin-top: 3px;
