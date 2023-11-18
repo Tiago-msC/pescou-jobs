@@ -58,7 +58,9 @@
     
     <div class="lista-de-cards">
         {#each cards as card (card.id)}
-        <Card  />
+        <div class="card">
+            <Card  />
+        </div>
         {/each}
     </div>
 </div>
@@ -137,17 +139,24 @@
         border-bottom: 1px solid var(--theme-color-light-gray);
     }
     .bloco-inferior{
-        padding: 0px 134px;
+        justify-content: center;
+        max-width: 1400px;
+        padding: 0 10px;
+    }
+    .card{
+        display: block;
     }
     .lista-de-cards{
+        padding-right: 134px;
+        padding-left: 134px;
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        /* flex-direction: row; */
-        justify-content: center;
-        gap: 24px;
-        /* padding: 20px; */
-        justify-content: space-between;
+        grid-row-gap: 40px;
+        grid-column-gap: 24px;
+        width: 100%;
+
     }
+
 
     @media screen and (max-width: 600px) {
     .corpo-descricao, .bloco-inferior{

@@ -25,7 +25,7 @@
       <ul>
         <li><a href="/">Para prestadores</a></li>
         <li><a href="/">Ajuda</a></li>
-        <li><a href="/">Cadastrar</a></li>
+        <li><a href="/auth/register">Cadastrar</a></li>
       </ul>
       <Button
         text="Entrar"

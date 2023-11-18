@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import '../../styles.css';
     import Card from '$lib/components/Card.svelte'
     import Header from '$lib/components/Header.svelte'
@@ -61,4 +61,4 @@
         padding: 20px;
         /* justify-content: space-between; */
     }
-</style>
+</style> -->

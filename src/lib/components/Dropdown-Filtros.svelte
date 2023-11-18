@@ -34,10 +34,21 @@
     border: 1px solid var(--theme-color-light-gray);
     background: var(--theme-color-white);
     position: relative;
+    border-radius: 8px;
+    line-height: 24px;
+    min-height: 48px;
+    min-width: 50px;
+    padding: 12px 16px;
+
+
 }
 
 .dropdown:hover .menu{
     display: inline-block;
+    border-radius: 8px;
+    margin-top: -0px;
+    min-height: 48px;
+    min-width: 50px;
     padding: 10px;
     
 }
