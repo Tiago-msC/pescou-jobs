@@ -66,6 +66,7 @@
 </div>
 
 <style>
+    
     .frase-certificado{
         color: #000;
         font-family: Poppins;
