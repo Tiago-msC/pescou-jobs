@@ -1,10 +1,12 @@
 <title>Listagem de Profissionais</title>
 <script lang="ts">
+    import downarrow from '$lib/assets/icons/downarrow.svg'
     export let text: string = "";
     export let text1: string = "";
     export let text2: string = "";
+
     
-    import downarrow from '$lib/assets/icons/downarrow.svg'
+    
 </script>
 <div>
     <nav >
