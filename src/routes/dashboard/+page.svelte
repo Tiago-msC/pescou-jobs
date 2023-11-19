@@ -10,6 +10,8 @@
     import money_icon from '$lib/assets/icons/money-icon.svg';
     import people_icon from '$lib/assets/icons/people-icon.svg';
     import clipboard_icon from '$lib/assets/icons/clipboard.svg';
+    import Servico1 from '$lib/components/Servico1.svelte';
+
 </script>
 
 <Header></Header>
@@ -116,9 +118,11 @@
         <h1>Serviços</h1>
         <h3>Confira os detalhes dos serviços prestados</h3>
       </div>
-      <div class="tabela-servicos">
 
-        
+      <div class="tabela-servicos">
+        {#each [1,2,3,4,5,6,7,8,9] as id}
+        <Servico1 id={id} Texto={id % 4 === 0 ? "Em Andamento" : "Finalizado"}/>
+        {/each}
       </div>
     </div>
 
@@ -146,6 +150,8 @@
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.082),-1px -1px 4px 1px rgba(0, 0, 0, 0.082);
   }
   .tabela-servicos{
+    overflow-y: auto;
+    /* max-height: 500px; */
     background-color: aliceblue;
     width: 1087px;
     height: 694px;
@@ -154,6 +160,27 @@
     border: 1px solid rgba(120, 120, 133, 0.35);
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.082),-1px -1px 4px 1px rgba(0, 0, 0, 0.082);
   }
+  .tabela-servicos::-webkit-scrollbar {
+    width: 5px;
+
+  } 
+
+.tabela-servicos::-webkit-scrollbar-track {
+    background: var(--theme-color-light-gray);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: calc(100%-20px);
+  } 
+
+.tabela-servicos::-webkit-scrollbar-thumb {
+    background: var(--theme-color-primary);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  } 
+
+.tabela-servicos::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } 
   .head-inferior-direita{
     background-color: aqua;
     margin-bottom: 40px;
