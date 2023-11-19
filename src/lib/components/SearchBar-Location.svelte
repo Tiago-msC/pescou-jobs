@@ -23,6 +23,7 @@
         outline: none;
         align-items: center;
         width: 280px;
+        height: 50px;
     }
     .icon-and-label{
         margin-top: 3px;
@@ -44,7 +45,7 @@
     .caixa-formulario{
         display: flex;
         width: 339px;
-        padding: 16px 24px;
+        padding: 4px 24px;
         gap: 9px;
         border: 1px solid var(--theme-color-light-gray);
         background: var(--theme-color-white);

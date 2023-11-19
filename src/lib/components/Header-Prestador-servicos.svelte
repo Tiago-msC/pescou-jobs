@@ -11,7 +11,7 @@
   import help_icon from "$lib/assets/icons/help-icon.svg";
   import messages_icon from "$lib/assets/icons/messages-mail.svg";
   
-  
+
   const handleNavigateLogin = () => {
     window.location.href = "/auth/login";
   };
@@ -22,7 +22,7 @@
   <!-- <img src={logoRetractable} alt="Logo PescouJobs" class="pescoujobs-logo-retractable"/> -->
   <nav id="desktop-menu">
     <div class="search-bar">
-      <a href="/"><img src={arrow_left} alt="Seta Esquerda" class="arrowleft"></a>
+      <a href="/" ><img src={arrow_left} alt="Seta Esquerda" class="arrowleft"></a>
       <a href="/"><img src={logo} alt="Logo PescouJobs" class="pescoujobs-logo" /></a>
     </div>
 

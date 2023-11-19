@@ -332,4 +332,26 @@
     font-size: 1rem;
     color: var(--theme-text-color-secondary);
   }
+@media screen and (max-width:1024px){
+  .sessao-graficos{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 40px);
+    resize: both;
+  }
+
+  .dash-total-clientes{
+    margin-top: 40px;
+  }
+  .corpo-inferior{
+    margin-top: 160px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .corpo-inferior div{
+    width: calc(100%);
+  }
+}
 </style>

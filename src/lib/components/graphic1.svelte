@@ -37,7 +37,7 @@
                 data: data,
                 options: {
                   
-                  responsive: false,
+                  responsive: true,
                   maintainAspectRatio: false,
                   // @ts-ignore
                   barThickness: 30,
@@ -82,4 +82,17 @@
         }
       });
     </script>
-<canvas bind:this={canvas2} width="578px" height="313px"/>
+<canvas bind:this={canvas2}/>
+
+<style>
+  canvas{
+    width:  578px;
+    height: 313px;
+  }
+@media screen and (max-width: 1000px) {
+  canvas{
+    width:  calc(50%-40px);
+    height: 313px;
+  }
+}
+</style>
