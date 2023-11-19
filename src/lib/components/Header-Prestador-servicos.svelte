@@ -1,10 +1,16 @@
-<script>
+<script lang='ts'>
   import logo from "$lib/assets/icons/pescoujobs-logo.svg";
   import logoRetractable from "$lib/assets/icons/pescoujobs-logo-retractable.svg";
   import Button from "./Button.svelte";
   import account from "$lib/assets/icons/account.svg";
   import SearchBar from "./SearchBar.svelte";
   import SearchBarLocation from "./SearchBar-Location.svelte";
+  import arrow_left from "$lib/assets/icons/arrow-left.svg";  
+  import notification_bell from "$lib/assets/icons/notification-bell.svg";
+  import imagem_perfil from "$lib/assets/icons/imagem-perfil2.svg";
+  import help_icon from "$lib/assets/icons/help-icon.svg";
+  import messages_icon from "$lib/assets/icons/messages-mail.svg";
+  
 
   const handleNavigateLogin = () => {
     window.location.href = "/auth/login";
@@ -16,24 +22,19 @@
   <!-- <img src={logoRetractable} alt="Logo PescouJobs" class="pescoujobs-logo-retractable"/> -->
   <nav id="desktop-menu">
     <div class="search-bar">
+      <a href="/" ><img src={arrow_left} alt="Seta Esquerda" class="arrowleft"></a>
       <a href="/"><img src={logo} alt="Logo PescouJobs" class="pescoujobs-logo" /></a>
-      <SearchBar/>
-      <SearchBarLocation/>
     </div>
 
     <div class="container-nav">
       <ul>
-        <li><a href="/dashboard">Para prestadores</a></li>
-        <li><a href="/">Ajuda</a></li>
-        <li><a href="/auth/register">Cadastrar</a></li>
+        
+        <li><img src={notification_bell} alt=""></li>
+        <li><img src={messages_icon} alt=""></li>
+        <li><img src={help_icon} alt=""></li>
+
       </ul>
-      <Button
-        text="Entrar"
-        notClickAnimation
-        type="outline"
-        iconLeft={account}
-        onClick={handleNavigateLogin}
-      />
+        <img src={imagem_perfil} alt="" style="height: 50px;width:50px" class="foto">
     </div>
     
   </nav>
@@ -43,12 +44,28 @@
 </header>
 
 <style>
+  .foto{
+    border-radius: 50%;
+    border: 1.5px solid var(--theme-text-color-primary);
+  }
+  .arrowleft{
+    height: 42px;
+    width: 42px;
+    padding: 8px;
+    background-color: var(--theme-background-color-primary);
+    transition: background-color 0.3s;
+    border-radius: 8px;
+  }
+  .arrowleft:hover{
+    border-radius: 8px;
+    background-color: var(--theme-border-color-primary);
+  }
+
   .search-bar{
     display: flex;
-    /* width: 1098px; */
+    justify-content: center;
     align-items: center;
     gap: 30px;
-    flex-shrink: 0;
   }
   header {
     border-bottom: 1px solid var(--theme-border-color-primary);
@@ -69,28 +86,25 @@
   ul {
     display: flex;
     margin-right: 24px;
+    gap:5px;
   }
   li {
-  list-style: none;
-  margin-left: 34px;
-  position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    list-style: none;
+    position: relative; 
+    transition: background-color 0.3s; 
   }
 
-  li::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 0;
-    bottom: -1px;
-    height: 1px;
-    transition: width 0.4s; 
-    background-color: var(--theme-text-color-primary);
+  li:hover {
+    border-radius: 8px;
+    background-color: var(--theme-border-color-primary);
   }
-
-
-  li:hover::after {
-    width: 100%; 
-  }
+  
 
   .container-nav {
     display: flex;
@@ -117,8 +131,8 @@
       padding: 0 24px;
     }
 
-    ul {
-      display: none;
+    .pescoujobs-logo {
+      height: 32px;
     }
   }
 

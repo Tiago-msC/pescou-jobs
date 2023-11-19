@@ -4,6 +4,7 @@
   import arrowicon from "$lib/assets/icons/arrow-right.svg";
   import InputServiceLocation from "$lib/components/input-service-location.svelte";
   import backgroundImage from "$lib/assets/foto-back.png";
+  import CardContador from "$lib/components/card-contador.svelte";
 
   const handleNavigateProfessionals = () => {
     window.location.href = "/profissionais";
@@ -50,12 +51,21 @@
             onClick={handleNavigateProfessionals}
           />
         </div>
-  
+        
+      </div>
     </div>
   </div>
-</div>
-
+  <div class="corpo-inferior">
+    
+    <CardContador/>
+  </div>
 <style>
+  .corpo-inferior{
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+
+  }
   .subheader {
     margin-top: 16px;
     margin-bottom: 24px;
@@ -118,6 +128,10 @@
         border-radius: 0px;
         box-shadow: none;
         padding: 24px 16px;
+    }
+    .corpo-inferior{
+      margin-top: 0px;
+      
     }
   }
 
