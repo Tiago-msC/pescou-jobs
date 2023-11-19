@@ -29,7 +29,7 @@
 
 <!-- Sessao dos graficos -->
 <div class="sessao-graficos">
-<!-- 1o Grafico  -->
+  <!-- 1o Grafico  -->
   <div class="dash-servicos-solicitados">
     <div class="head">
       <div class="esquerda">
@@ -52,7 +52,7 @@
       <Graphic1/>
     </div>
   </div>
-<!-- 2o Grafico -->
+  <!-- 2o Grafico -->
   <div class="dash-servicos-solicitados">
     <div class="head">
       <div class="esquerda">
@@ -91,25 +91,87 @@
     </div>
 
     <!-- 4o Grafico -->
-    <div class="dash-total-clientes">
-      <div class="head">
-        <div class="esquerda">
-          <img src={people_icon} alt="people_icon">
-          <span class="texto-head">Total de clientes</span>
-        </div>
-        <div class="contagem-porcentagem">
-          <span class="porcentagem-negativa">-10.0%</span>
-        </div>
+  <div class="dash-total-clientes">
+    <div class="head">
+      <div class="esquerda">
+        <img src={people_icon} alt="people_icon">
+        <span class="texto-head">Total de clientes</span>
       </div>
-      <div class="contagem-servicos">
-        <span class="contador-servicos">1.549</span>
+      <div class="contagem-porcentagem">
+        <span class="porcentagem-negativa">-10.0%</span>
       </div>
-<!-- Fim da sessao de Gráficos/Dashboard -->
-    
+    </div>
+    <div class="contagem-servicos">
+      <span class="contador-servicos">1.549</span>
+  </div>
+  <!-- Fim da sessao de Gráficos/Dashboard -->
 </div>
 </body>
 
+<body>
+  
+  <div class="corpo-inferior">
+    <div class="corpo-inferior-esquerda">
+      <div class="head-inferior-esquerda">
+        <h1>Serviços</h1>
+        <h3>Confira os detalhes dos serviços prestados</h3>
+      </div>
+      <div class="tabela-servicos">
+
+        
+      </div>
+    </div>
+
+
+    <div class="corpo-inferior-direito">
+      <div class="head-inferior-direita">
+        <h1>Feedback</h1>
+        <h3>Lista de feedbacks dos seus clientes</h3>
+      </div>
+      <div class="tabela-feedback">
+
+      </div>
+    </div>
+  </div>
+</body>
+
 <style>
+  .tabela-feedback{
+    background-color: aliceblue;
+    width: 692px;
+    height: 694px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(120, 120, 133, 0.35);
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.082),-1px -1px 4px 1px rgba(0, 0, 0, 0.082);
+  }
+  .tabela-servicos{
+    background-color: aliceblue;
+    width: 1087px;
+    height: 694px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(120, 120, 133, 0.35);
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.082),-1px -1px 4px 1px rgba(0, 0, 0, 0.082);
+  }
+  .head-inferior-direita{
+    background-color: aqua;
+    margin-bottom: 40px;
+  }
+  .head-inferior-esquerda{
+    background-color: rgb(0, 255, 136);
+    margin-bottom: 40px;
+  }
+  .corpo-inferior{
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    background-color: #f7f7f7;
+    width: 100%;
+    padding: 25px;
+    gap: 40px;
+  }
+
+
 
   .porcentagem-negativa{
     background: rgba(238, 68, 58, 0.30);
@@ -232,6 +294,8 @@
 
   }
   .sessao-graficos{
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     row-gap: 46px;
     column-gap: 46px;
