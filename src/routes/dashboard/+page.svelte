@@ -11,7 +11,7 @@
     import people_icon from '$lib/assets/icons/people-icon.svg';
     import clipboard_icon from '$lib/assets/icons/clipboard.svg';
     import Servico1 from '$lib/components/Servico1.svelte';
-
+    import foto_servico1 from '$lib/assets/foto-servico1.svg'
 </script>
 
 <Header></Header>
@@ -119,11 +119,26 @@
         <h3>Confira os detalhes dos serviços prestados</h3>
       </div>
 
-      <div class="tabela-servicos">
-        {#each [1,2,3,4,5,6,7,8,9] as id}
-        <Servico1 id={id} Texto={id % 4 === 0 ? "Em Andamento" : "Finalizado"}/>
-        {/each}
+      
+      <div class="head-tabela-servicos">
+        <!-- <div class="filtro-tabela-servicos">
+          <select name="Nome" id="Nome">
+            <option value="Nome">Nome</option>
+            <option value="ID">ID</option>
+            <option value="Status">Status</option>
+          </select>
+        </div> -->
+        <div class="head">
+          <div class="head-esquerda">Nome do serviço</div>
+          <div class="head-direita"><span>ID</span><span>Preço</span><span>Status</span></div>
+        </div>
+        <div class="tabela-servicos">
+          {#each [1,2,3,4,5,6,7,8,9] as id}
+          <Servico1 id={id} Texto={id % 4 === 0 ? "Em Andamento" : "Finalizado"}/>
+          {/each}
+        </div>
       </div>
+
     </div>
 
 
@@ -140,8 +155,28 @@
 </body>
 
 <style>
+
+  .head-tabela-servicos .head-direita{
+    display: flex;
+    gap: 171px;
+    margin: 50px;
+    justify-content: space-between;
+  }
+  .head-tabela-servicos .head{
+    display: flex;
+    position: sticky;
+    top:0;
+    background-color: var(--theme-color-white);
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 35px;
+    height: 60px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--theme-text-color-primary);
+    border-bottom: 1px solid var(--theme-border-color-primary);
+  }
   .tabela-feedback{
-    background-color: aliceblue;
     width: 692px;
     height: 694px;
     flex-shrink: 0;
@@ -149,10 +184,9 @@
     border: 1px solid rgba(120, 120, 133, 0.35);
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.082),-1px -1px 4px 1px rgba(0, 0, 0, 0.082);
   }
-  .tabela-servicos{
+  .head-tabela-servicos{
     overflow-y: auto;
     /* max-height: 500px; */
-    background-color: aliceblue;
     width: 1087px;
     height: 694px;
     flex-shrink: 0;
@@ -160,41 +194,43 @@
     border: 1px solid rgba(120, 120, 133, 0.35);
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.082),-1px -1px 4px 1px rgba(0, 0, 0, 0.082);
   }
-  .tabela-servicos::-webkit-scrollbar {
+  .head-tabela-servicos::-webkit-scrollbar {
     width: 5px;
 
   } 
 
-.tabela-servicos::-webkit-scrollbar-track {
+.head-tabela-servicos::-webkit-scrollbar-track {
     background: var(--theme-color-light-gray);
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    /* border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px; */
     height: calc(100%-20px);
+    margin:4px;
   } 
 
-.tabela-servicos::-webkit-scrollbar-thumb {
+.head-tabela-servicos::-webkit-scrollbar-thumb {
     background: var(--theme-color-primary);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    height: 50px;
   } 
 
-.tabela-servicos::-webkit-scrollbar-thumb:hover {
+.head-tabela-servicos::-webkit-scrollbar-thumb:hover {
     background: #555;
   } 
   .head-inferior-direita{
-    background-color: aqua;
     margin-bottom: 40px;
   }
   .head-inferior-esquerda{
-    background-color: rgb(0, 255, 136);
     margin-bottom: 40px;
   }
   .corpo-inferior{
+    border-top: 1px solid var(--theme-color-light-gray);
+    margin-top: -20px;
     display: grid;
     grid-template-columns: 1.7fr 1fr;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     width: 100%;
-    padding: 25px;
+    padding: 25px 55px;
     gap: 40px;
   }
 
