@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-import banner from '$lib/assets/foto-banner.svg'
+import banner from '$lib/assets/foto-servico1.svg'
 // @ts-ignore
 export let Texto;
 export let id;
@@ -71,14 +71,14 @@ export let id;
     }
     .corpo-servico{
     display: flex;
-    padding: 20px;
+    padding: 24px 40px;
     background: rgba(214, 214, 255, 0.50);
     align-items: center;
     justify-content: space-between;
     }
     .corpo-servico-impar{
     display: flex;
-    padding: 20px;
+    padding: 24px 40px;
     background: var(--theme-color-white);
     align-items: center;
     justify-content: space-between;
