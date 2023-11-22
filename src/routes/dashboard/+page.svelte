@@ -1,4 +1,4 @@
-<script>
+-<script>
     import '../../styles.css';
     import Header from '$lib/components/Header-Prestador-servicos.svelte';
     import Chart from 'chart.js/auto';
@@ -396,6 +396,12 @@
     color: var(--theme-text-color-secondary);
   }
 @media screen and (max-width:1024px){
+  .head-tabela-servicos .head-direita{
+    display: flex;
+    gap: 10vw;
+    margin: 50px;
+    justify-content: space-between;
+  }
   .sessao-graficos{
     align-items: center;
     justify-content: center;
