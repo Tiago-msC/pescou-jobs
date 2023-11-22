@@ -36,11 +36,13 @@ export let id;
         background-color:  #8BCDFB4D;
         color: #268ABC;
     }
-    
+    .id-preco-status .id{
+        margin-right: 70px;
+    }
     .id-preco-status .preco{
         font-size: 1.125rem;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         line-height: normal;
     }
     .id-preco-status .status{
@@ -48,7 +50,7 @@ export let id;
         width: 151px;
         border-radius: 5px;
         padding: 10px 10px;
-        font-weight: 600;
+        font-weight: 500;
         text-align: center;
     }
 
@@ -56,7 +58,7 @@ export let id;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 100px;
+    gap: 102px;
     }
     .foto-nome img{
     height: 73px;
@@ -82,5 +84,12 @@ export let id;
     background: var(--theme-color-white);
     align-items: center;
     justify-content: space-between;
+    }
+
+
+    @media screen and (max-width:1024px){
+    .id-preco-status{
+        gap: 20px;
+    }
     }
 </style>
