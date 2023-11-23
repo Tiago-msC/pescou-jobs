@@ -67,29 +67,29 @@ export let id;
     border-radius: 5px;
     }
     .foto-nome{
-    gap: 35px;
+    gap: 2.1875rem;
     display: flex;
     align-items: center;
     }
     .corpo-servico{
     display: flex;
-    padding: 24px 40px;
+    padding: 1.5rem 2.5rem;
     background: rgba(214, 214, 255, 0.50);
     align-items: center;
     justify-content: space-between;
     }
     .corpo-servico-impar{
     display: flex;
-    padding: 24px 40px;
+    padding: 1.5rem 2.5rem;
     background: var(--theme-color-white);
     align-items: center;
     justify-content: space-between;
     }
 
 
-    @media screen and (max-width:1024px){
+    @media screen and (max-width:64rem){
     .id-preco-status{
-        gap: 20px;
+        gap: 1.25rem;
     }
     }
 </style>
