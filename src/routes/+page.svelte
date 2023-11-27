@@ -3,7 +3,7 @@
   import Header from "$lib/components/Header.svelte";
   import arrowicon from "$lib/assets/icons/arrow-right.svg";
   import InputServiceLocation from "$lib/components/input-service-location.svelte";
-  import backgroundImage from "$lib/assets/foto-back.svg";
+  import backgroundImage from "$lib/assets/foto-back.png";
   import CardContador from "$lib/components/card-contador.svelte";
 
   const handleNavigateProfessionals = () => {

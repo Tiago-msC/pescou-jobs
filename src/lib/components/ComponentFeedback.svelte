@@ -57,8 +57,9 @@
         padding: 0 20px;
     }
     .corpo-card{
+        border: 1px solid var(--theme-color-light-gray);
         display: flex;
         flex-direction: row;
-        padding: 20px;
+        padding: 40px;
     }
 </style>

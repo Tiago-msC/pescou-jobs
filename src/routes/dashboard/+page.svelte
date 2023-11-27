@@ -81,33 +81,35 @@
     </div>
   </div>
   <!-- 3o Gráfico -->
-  <div class="dash-total-serviçoos-prestados">
-    <div class="head">
-      <div class="esquerda">
-        <img src={clipboard_icon} alt="clipboard_icon">
-        <span class="texto-head">Total de serviçoos prestados</span>
+  <div class="container-3-4-Grafico">
+    <div class="dash-total-serviços-prestados">
+      <div class="head">
+        <div class="esquerda">
+          <img src={clipboard_icon} alt="clipboard_icon">
+          <span class="texto-head">Total de serviços prestados</span>
+        </div>
+        <div class="contagem-porcentagem_2">
+          <span class="porcentagem">+8.0%</span>
+        </div>
       </div>
-      <div class="contagem-porcentagem">
-        <span class="porcentagem">+8.0%</span>
-      </div>
-    </div>
-    <div class="contagem-servicos">
-      <span class="contador-servicos">149</span>
-    </div>
-
-    <!-- 4o Grafico -->
-  <div class="dash-total-clientes">
-    <div class="head">
-      <div class="esquerda">
-        <img src={people_icon} alt="people_icon">
-        <span class="texto-head">Total de clientes</span>
-      </div>
-      <div class="contagem-porcentagem">
-        <span class="porcentagem-negativa">-10.0%</span>
+      <div class="contagem-servicos">
+        <span class="contador-servicos">149</span>
       </div>
     </div>
-    <div class="contagem-servicos">
-      <span class="contador-servicos">1.549</span>
+    <!-- 4o Gráfico -->
+    <div class="dash-total-clientes">
+      <div class="head">
+        <div class="esquerda">
+          <img src={people_icon} alt="people_icon">
+          <span class="texto-head">Total de clientes</span>
+        </div>
+        <div class="contagem-porcentagem_2">
+          <span class="porcentagem-negativa">-10.0%</span>
+        </div>
+      </div>
+      <div class="contagem-clientes">
+        <span class="contador-servicos">1.549</span>
+    </div>
   </div>
   <!-- Fim da sessao de Gráficos/Dashboard -->
 </div>
@@ -126,7 +128,7 @@
       <div class="head-tabela-servicos">
         <div class="head">
           <div class="head-esquerda">Nome do serviço</div>
-          <div class="head-direita"><span>ID</span><span>Preço</span><span>Status</span></div>
+          <div class="head-direita"><span id="id">ID</span><span>Preço</span><span>Status</span></div>
         </div>
         <div class="tabela-servicos">
           {#each [1,2,3,4,5,6,7,8,9] as id}
@@ -153,17 +155,29 @@
 </body>
 
 <style>
+  .container-3-4-Grafico{
+    border: 1px solid pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
   .head-tabela-servicos .head-esquerda{
     display: flex;
-    gap: 171px;
+    gap: 121px;
+    width: auto;
+    border: 1px solid teal 
   }
   .head-tabela-servicos .head-direita{
+    border: 1px solid yellow;
     display: flex;
-    gap: 171px;
-    margin: 50px;
+    align-items: center;
+    width: auto;
     justify-content: space-between;
+    gap: 10.5em;
   }
   .head-tabela-servicos .head{
+    border: 1px solid slateblue;
     display: flex;
     position: sticky;
     top:0;
@@ -253,6 +267,7 @@
     margin-bottom: 40px;
   }
   .corpo-inferior{
+   
     border-top: 1px solid var(--theme-color-light-gray);
     margin-top: -20px;
     display: grid;
@@ -273,7 +288,7 @@
     font-weight: 600;
     display: flex;
     align-items: center;
-    margin-left: 75px;
+    /* margin-left: 75px; */
     justify-content: space-between;
     color: #A12626;}
   
@@ -283,17 +298,30 @@
     margin-bottom: 32px;
   }
   .dash-total-clientes{
+    max-width: 100%;
+  box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
-    width: 515px;
-    height: 221px;
+    width: auto;
+    height: auto;
     padding: 25px;
     border-radius: 12px;
     border: 1px solid var(--theme-border-color-primary);
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.082),-1px -1px 4px 1px rgba(0, 0, 0, 0.082);
-    overflow: visible;
+    /* overflow: visible; */
+  }
+  .contagem-clientes{
+    display: flex;
+    margin-top: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 324px;
+    height: 73px;
+    font-weight: 700;
+    background-color: rgba(139, 205, 251, 0.30);
+    border-radius: 15px;
   }
   .contagem-servicos{
     display: flex;
@@ -312,17 +340,17 @@
     font-size: 2rem;
 
   }
-  .dash-total-serviçoos-prestados{
+  .dash-total-serviços-prestados{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 515px;
-    height: 221px;
+    width: auto;
+    height: auto;
     padding: 25px;
     border-radius: 12px;
     border: 1px solid var(--theme-border-color-primary);
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.082),-1px -1px 4px 1px rgba(0, 0, 0, 0.082);
-    overflow: visible;
+    /* overflow: visible; */
   }
   .porcentagem{
     background-color: rgba(139, 205, 251, 0.30);
@@ -342,11 +370,13 @@
     margin-left: 75px;
     margin-bottom: 16px;
     justify-content: space-between;
+    border: 1px solid aquamarine;
   }
   .head{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    border: 1px solid red;
   }
   .filtro{
     width: 110px;
@@ -361,10 +391,24 @@
   .esquerda{
     display: flex;
     align-items: center;
+    justify-content: center;
+    border: 1px solid red;
 
   }
+  .contagem-porcentagem_2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+  }
+  .contagem-porcentagem{
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+  }
   .texto-head{
-    padding: 15px;
+    padding: 1vw;
   }
   .esquerda img {
     width: 60px;
@@ -376,24 +420,29 @@
   .dash-servicos-solicitados{
     display: flex;
     flex-direction: column;
-    width: 620px;
-    height: 507px;
+    /* width: 620px; */
+    /* height: 507px; */
     flex-shrink: 0;
     padding: 25px;
     border-radius: 12px;
     border: 1px solid var(--theme-border-color-primary);
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.082),-1px -1px 4px 1px rgba(0, 0, 0, 0.082);
     overflow: visible;
+    max-width: 100%;
+    box-sizing: border-box;
 
   }
+
+
   .sessao-graficos{
+    display: flex;
     margin-top: 40px;
     margin-bottom: 40px;
-    display: flex;
     row-gap: 46px;
     column-gap: 46px;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     gap: 32px;
+    border: 1px solid red;
   }
 
   .subtitulo{
@@ -410,6 +459,7 @@
   }
   .corposuperior{
     padding: 56px 60px;
+    border: 1px solid blue;
   }
   a{
     text-decoration: none;
@@ -426,10 +476,15 @@
     color: var(--theme-text-color-secondary);
   }
 @media screen and (max-width:1400px){
+  .head-tabela-servicos .img{
+    display: none;
+  }
+  
+
   .head-tabela-servicos .head-direita{
     display: flex;
     gap: 10vw;
-    margin: 50px;
+    /* margin: 50px; */
     justify-content: space-between;
   }
   .sessao-graficos{
@@ -440,6 +495,22 @@
     width: calc(100% - 100px);
     /* resize: both; */
   }
+  .dash-total-clientes{
+    margin-top: 40px;
+  }
+  .corpo-inferior{
+    margin-top: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid green;
+  }
+  .corpo-inferior div{
+    width: calc(100%);
+  }
+  body{
+    overflow-x: hidden;
+  }
+}
 @media screen and (max-width:1300px){
   .sessao-graficos{
     display: flex;
@@ -450,18 +521,65 @@
     /* resize: both; */
   }
 
-  
+
+  @media screen and (max-width: 43.75rem) {
+    .head-tabela-servicos #id{
+    display: none;
+  }
+  .sessao-graficos {
+    flex-direction: column;
+  }
+  .sessao-graficos > div {
+  max-width: 90%;
 }
-  .dash-total-clientes{
-    margin-top: 40px;
+  .corposuperior{
+    padding: 0px 0px;
+    
+  }
+  .head-direita{
+    display: flex;
+    gap: 10vw;
+    /* margin: 50px; */
+    justify-content: space-between;
   }
   .corpo-inferior{
-    margin-top: 160px;
+    margin-top: 60px;
     display: flex;
     flex-wrap: wrap;
+    /* padding: 2%; */
   }
-  .corpo-inferior div{
+}
+@media screen and (max-width: 480px) {
+  .sessao-graficos {
+    flex-direction: column;
+  }
+  .sessao-graficos > div {
+    max-width: 90%;
+}
+  .contagem-servicos,.contagem-clientes{
+    width: 100%;
+  }
+  .corposuperior{
+    padding: 5%;
+    
+  }
+  .head{
     width: calc(100%);
+    height: calc(100%);
   }
+
+  .contagem-porcentagem{
+    margin-left: 0px;
+  
+  }
+  .corpo-inferior{
+
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+  }
+}
+  
 }
 </style>
