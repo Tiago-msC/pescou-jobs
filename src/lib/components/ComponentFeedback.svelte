@@ -1,16 +1,19 @@
 <script>
+// @ts-nocheck
+
     import '../../styles.css';
     import foto_user from '$lib/assets/icons/foto-user.svg';
     import estrelas from '$lib/assets/icons/estrelas.svg';
     import estrelas_vazias from '$lib/assets/icons/estrelas-vazias.svg'
-
+    // @ts-ignore
+    export let id;
     
 
 
 
 </script>
 
-<div class="corpo-card">
+<div class="corpo-card" class:corpo-feedback-impar={id % 2 === 1}>
     <img src={foto_user} alt="foto-usuario" class="foto">
     <div class="texto">
         <div class="head-card">
@@ -30,6 +33,10 @@
 </div>
 
 <style>
+    .corpo-feedback-impar{
+        background: rgba(214, 214, 255, 0.50);
+        
+        }
     .nome{
         font-weight: 600;
     }

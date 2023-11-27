@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     import { Chart } from 'chart.js';
     import ComponentFeedback from '$lib/components/ComponentFeedback.svelte';
     import '../../styles.css';
@@ -19,4 +19,4 @@
         flex-direction: column;
         padding: 20;
     }
-</style>
+</style> -->

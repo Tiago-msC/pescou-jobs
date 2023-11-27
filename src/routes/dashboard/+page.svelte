@@ -12,6 +12,8 @@
     import clipboard_icon from '$lib/assets/icons/clipboard.svg';
     import Servico1 from '$lib/components/Servico1.svelte';
     import foto_servico1 from '$lib/assets/foto-servico1.svg'
+    import ComponentFeedback from '$lib/components/ComponentFeedback.svelte';
+
 </script>
 
 <Header></Header>
@@ -148,7 +150,9 @@
         <h3>Lista de feedbacks dos seus clientes</h3>
       </div>
       <div class="tabela-feedback">
-
+        {#each [1,2,3,4,5,6,7,8,9] as id}
+        <ComponentFeedback id={id}/>
+        {/each}
       </div>
     </div>
   </div>
@@ -177,13 +181,41 @@
     border-bottom: 1px solid var(--theme-border-color-primary);
   }
   .tabela-feedback{
-    width: 692px;
-    height: 694px;
+    overflow-y: auto;
+    max-height: 692px;
+    width: auto;
+    padding:0px;
     flex-shrink: 0;
     border-radius: 12px;
     border: 1px solid rgba(120, 120, 133, 0.35);
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.082),-1px -1px 4px 1px rgba(0, 0, 0, 0.082);
   }
+
+
+
+  .tabela-feedback::-webkit-scrollbar {
+    width: 5px;
+
+  } 
+
+  .tabela-feedback::-webkit-scrollbar-track {
+    background: var(--theme-color-light-gray);
+    /* border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px; */
+    height: calc(100%-20px);
+    margin:4px;
+  } 
+
+  .tabela-feedback::-webkit-scrollbar-thumb {
+    background: var(--theme-color-primary);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 50px;
+  } 
+
+  .tabela-feedback::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } 
   .head-tabela-servicos{
     overflow-y: auto;
     /* max-height: 500px; */
