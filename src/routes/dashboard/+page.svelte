@@ -1,4 +1,4 @@
--<script>
+<script>
     import '../../styles.css';
     import Header from '$lib/components/Header-Prestador-servicos.svelte';
     import Chart from 'chart.js/auto';
@@ -18,6 +18,7 @@
 
 <Header></Header>
 <body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="corposuperior">
   <div class="navbar">
     <span class="inicio"><a href="/">Início</span>
@@ -123,13 +124,6 @@
 
       
       <div class="head-tabela-servicos">
-        <!-- <div class="filtro-tabela-servicos">
-          <select name="Nome" id="Nome">
-            <option value="Nome">Nome</option>
-            <option value="ID">ID</option>
-            <option value="Status">Status</option>
-          </select>
-        </div> -->
         <div class="head">
           <div class="head-esquerda">Nome do serviço</div>
           <div class="head-direita"><span>ID</span><span>Preço</span><span>Status</span></div>
@@ -159,7 +153,10 @@
 </body>
 
 <style>
-
+  .head-tabela-servicos .head-esquerda{
+    display: flex;
+    gap: 171px;
+  }
   .head-tabela-servicos .head-direita{
     display: flex;
     gap: 171px;
@@ -219,7 +216,7 @@
   .head-tabela-servicos{
     overflow-y: auto;
     /* max-height: 500px; */
-    width: 1087px;
+    width: auto;
     height: 694px;
     flex-shrink: 0;
     border-radius: 12px;
@@ -259,9 +256,10 @@
     border-top: 1px solid var(--theme-color-light-gray);
     margin-top: -20px;
     display: grid;
+    box-sizing: border-box;
     grid-template-columns: 1.7fr 1fr;
     /* background-color: #f7f7f7; */
-    width: 100%;
+    width: auto;
     padding: 25px 55px;
     gap: 40px;
   }
@@ -427,7 +425,7 @@
     font-size: 1rem;
     color: var(--theme-text-color-secondary);
   }
-@media screen and (max-width:1024px){
+@media screen and (max-width:1400px){
   .head-tabela-servicos .head-direita{
     display: flex;
     gap: 10vw;
@@ -435,14 +433,25 @@
     justify-content: space-between;
   }
   .sessao-graficos{
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
     flex-wrap: wrap;
-    width: calc(100% - 40px);
-    resize: both;
+    width: calc(100% - 100px);
+    /* resize: both; */
+  }
+@media screen and (max-width:1300px){
+  .sessao-graficos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    /* resize: both; */
   }
 
+  
+}
   .dash-total-clientes{
     margin-top: 40px;
   }
