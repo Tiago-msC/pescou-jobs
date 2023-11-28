@@ -211,8 +211,6 @@
 
   .tabela-feedback::-webkit-scrollbar-track {
     background: var(--theme-color-light-gray);
-    /* border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px; */
     height: calc(100%-20px);
     margin:4px;
   } 
