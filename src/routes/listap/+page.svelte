@@ -40,9 +40,9 @@
         >
         <div class="avaliacao">
           <img src={star_active} alt="Estrela" />
-          <span class="numero-avaliacao" style="font-weight: 600;"
-            >4.5 <b style="font-weight: 400;color:#777"
-              >(<b style="font-weight: 400; text-decoration-line:underline">5</b
+          <span class="numero-avaliacao" style="font-weight: 600; width:auto"
+            >4.9 <b style="font-weight: 400;color:#777"
+              >(<b style="font-weight: 400; text-decoration-line:underline">225</b
               >)</b
             ></span
           >
@@ -384,6 +384,13 @@
   }
 
   @media (max-width: 1024px) {
+    .calendario {
+      right: 5%;
+      /* top: 50%; */
+      position: absolute;
+      z-index: 1;
+      display: flex;
+    }
     .container-agendar {
       margin-top: 45%;
       margin-left: 10%;
@@ -406,6 +413,7 @@
 
     @media screen and (max-width: 768px) {
       .calendario{
+        margin-right: 05%;
         justify-content: center;
         border-radius: 8px;
         border: 1px solid var(--theme-border-color-primary);
@@ -504,5 +512,14 @@
         align-items: center;
       }
     }
+    @media screen and (max-width:480px) {
+      .calendario{
+        margin-right: 0%;
+        justify-content: center;
+        border-radius: 8px;
+        border: 1px solid var(--theme-border-color-primary);
+      }
+    }
+
   }
 </style>

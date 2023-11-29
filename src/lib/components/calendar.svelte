@@ -149,4 +149,9 @@
     list-style: none;
 
   }
+  @media (max-width: 600px) {
+    .card{
+      width: 100%;
+    }
+  }
 </style>
