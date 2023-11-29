@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import HeaderSearcher from "$lib/components/Header-Searcher.svelte";
   import arrow_right from "$lib/assets/icons/slight-arrow-right.svg";
   import ServiceCategories from "$lib/components/ServiceCategories.svelte";
@@ -9,10 +9,12 @@
   import pin_localizacao from "$lib/assets/icons/pin-localizacao.svg";
   import foto_perfil_grande from "$lib/assets/icons/foto-perfil-grande.svg";
   import Button from "$lib/components/Button.svelte";
-
+  import Calendar from "$lib/components/calendar.svelte";
   const handleNavigateProfessionals = () => {
     window.location.href = "/profissionais";
   };
+  let showCalendar = false;
+
 </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -60,12 +62,7 @@
           <div class="localizacao-texto">Imbiribeira, Recife, Pernambuco</div>
         </div>
         <div class="botao-contato">
-          <Button
-            expended
-            text="Entre em contato comigo"
-            type="outline"
-            onClick={handleNavigateProfessionals}
-          />
+          <Button expended text="Entre em contato comigo" type="outline" />
         </div>
       </div>
     </div>
@@ -96,8 +93,6 @@
         <span id="tag_texto">Reparo de circuitos elétricos</span>
       </div>
     </div>
-
-
   </div>
   <div class="div-direita">
     <div class="container-agendar">
@@ -114,89 +109,150 @@
           expended
           text="Fazer agendamento"
           type="outline"
-          onClick={handleNavigateProfessionals}
+          onClick={() => {
+            showCalendar = !showCalendar;
+            console.log("Botão clicado, showCalendar é", showCalendar);
+          }}
         />
       </div>
     </div>
+    {#if showCalendar}
+      <div class="calendario">
+        <Calendar />
+      </div>
+    {/if}
     <div class="avaliacoes">
       <h2>Avaliações</h2>
+      <div class="head-avaliacoes">
+        <span class="total-avaliacoes">225 avaliações desse prestador</span>
+        <div class="linha-media-estrela">
+          <img src={star_active} alt="Estrela" />
+          <img src={star_active} alt="Estrela" />
+          <img src={star_active} alt="Estrela" />
+          <img src={star_active} alt="Estrela" />
+          <img src={star_active} alt="Estrela" />
+          4.9
+        </div>
+      </div>
       <div class="container-avaliacao">
         <div class="avaliacao">
           <img src={star_active} alt="Estrela" />
           <span class="numero-avaliacao" style="font-weight: 600;"
-            >5 <b style="font-weight: 400;color:#777"
-            ></span
+            >5 <b style="font-weight: 400;color:#777"></b></span
           >
           <div class="barra"><div class="preencher"></div></div>
+          <span class="numero-avaliacoes">(174)</span>
         </div>
         <div class="avaliacao">
           <img src={star_active} alt="Estrela" />
           <span class="numero-avaliacao" style="font-weight: 600;"
-            >4 <b style="font-weight: 400;color:#777"
-            ></span
+            >4 <b style="font-weight: 400;color:#777"></b></span
           >
-          <div class="barra"><div class="preencher" style="width: 11%;"></div></div>
+          <div class="barra">
+            <div class="preencher" style="width: 11%;"></div>
+          </div>
+          <span class="numero-avaliacoes">(36)</span>
         </div>
         <div class="avaliacao">
           <img src={star_active} alt="Estrela" />
           <span class="numero-avaliacao" style="font-weight: 600;"
-            >3 <b style="font-weight: 400;color:#777"
-            ></span
+            >3 <b style="font-weight: 400;color:#777"></b></span
           >
-          <div class="barra"><div class="preencher" style="width: 7%;"></div></div>
+          <div class="barra">
+            <div class="preencher" style="width: 7%;"></div>
+          </div>
+          <span class="numero-avaliacoes">(12)</span>
         </div>
         <div class="avaliacao">
           <img src={star_active} alt="Estrela" />
           <span class="numero-avaliacao" style="font-weight: 600;"
-            >2 <b style="font-weight: 400;color:#777"></span
+            >2 <b style="font-weight: 400;color:#777"></b></span
           >
-          <div class="barra"><div class="preencher" style="width: 4%;"></div></div>
+          <div class="barra">
+            <div class="preencher" style="width: 4%;"></div>
+          </div>
+          <span class="numero-avaliacoes">(2)</span>
         </div>
         <div class="avaliacao">
           <img src={star_active} alt="Estrela" />
           <span class="numero-avaliacao" style="font-weight: 600;"
-            >1 <b style="font-weight: 400;color:#777"
-            >
-          </span
+            >1 <b style="font-weight: 400;color:#777"> </b></span
           >
-          <div class="barra"><div class="preencher" style="width: 1%;"></div></div>
+          <div class="barra">
+            <div class="preencher" style="width: 1%;"></div>
+          </div>
+          <span class="numero-avaliacoes">(1)</span>
         </div>
       </div>
     </div>
-
   </div>
-
 </body>
 
 <style>
-  .container-avaliacao{
+  .avaliacao .numero-avaliacao{
+    width:6px;
+  }
+  .numero-avaliacoes{
+    font-size: 1rem;
+    color: var(--theme-color-text-secondary);
+    text-align: right;
+    width: 50px;
+  }
+  .calendario {
+    right: 15%;
+    /* top: 50%; */
+    position: absolute;
+    z-index: 1;
     display: flex;
+  }
+  .avaliacao > img {
+    width: 20px;
+  }
+  .head-avaliacoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .linha-media-estrela {
+    display: flex;
+    gap: 5px;
+    height: 20px;
+  }
+  .container-avaliacao {
+    display: flex;
+
     flex-direction: column;
+    justify-content: center;
     margin-top: 20px;
-    gap: 15px;
   }
-  .avaliacao{
-    padding:5px;
+  .avaliacao {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    row-gap: 10px;
+    gap: 20px;
   }
-  .preencher{
-    background: #1dbf73;
+  .preencher {
+    background: var(--theme-color-secondary);
     width: 90%;
-    height: 5px;
+    height: 8px;
     border-radius: 999px;
   }
-  .barra{
+  .barra {
+    display: flex;
+    justify-content: space-between;
     background: #cecece;
     width: 60%;
-    height: 5px;
+    height: 9px;
     border-radius: 999px;
   }
-  .avaliacoes{
+  .avaliacoes {
     display: flex;
     padding: 20px;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
-    border: 1px solid deepskyblue;
+    margin-left: 5vmin;
+    /* align-items: center; */
+    justify-content: center;
     margin-top: 10vmin;
   }
   .botao1,
@@ -288,7 +344,7 @@
   }
   body {
     padding: 20px 120px;
-    background: #131313;
+    /* background: #131313; */
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -297,7 +353,7 @@
     align-items: center;
     top: 0;
     gap: 10px;
-    border: #e4e5e7 1px solid;
+    /* border: #e4e5e7 1px solid; */
   }
   .texto-profissional {
     font-size: 2rem;
@@ -349,9 +405,27 @@
     }
 
     @media screen and (max-width: 768px) {
+      .calendario{
+        justify-content: center;
+        border-radius: 8px;
+        border: 1px solid var(--theme-border-color-primary);
+      }
+      .avaliacoes > h2 {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .head-avaliacoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .avaliacoes {
+        margin-left: 0vmin;
+      }
       .container-agendar {
         margin-top: 5%;
         margin-left: 0%;
+        margin-bottom: -10%;
         width: 100%;
       }
       .div-direita {
