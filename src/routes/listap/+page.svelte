@@ -200,7 +200,7 @@
   }
   .calendario {
     right: 15%;
-    /* top: 50%; */
+    top: 50%;
     position: absolute;
     z-index: 1;
     display: flex;
