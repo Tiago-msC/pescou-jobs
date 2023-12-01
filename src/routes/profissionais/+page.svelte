@@ -158,6 +158,7 @@
         transition: transform 0.3s, border 0.3s;
     }
     .lista-de-cards{
+        border: 1px solid red;
         display: grid;
         grid-template-columns: repeat(4,1fr);
         grid-row-gap: 4vmin;
