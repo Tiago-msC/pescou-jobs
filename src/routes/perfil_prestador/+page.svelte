@@ -10,6 +10,8 @@
   import foto_perfil_grande from "$lib/assets/icons/foto-perfil-grande.svg";
   import Button from "$lib/components/Button.svelte";
   import Calendar from "$lib/components/calendar.svelte";
+  import white_arrow from "$lib/assets/icons/white-arrow.svg";
+  import ComponentFeedback_2 from "$lib/components/ComponentFeedback_2.svelte";
   const handleNavigateProfessionals = () => {
     window.location.href = "/profissionais";
   };
@@ -93,102 +95,127 @@
         <span id="tag_texto">Reparo de circuitos elétricos</span>
       </div>
     </div>
+    <div class="botao-portfolio">
+      <Button expended text="Ver portfólio" type="primary" iconRight={white_arrow} />
+    </div>
+    <div class="avaliacoes-texto">
+      <div class="avaliacoes-texto-head"><span id="header"><h2><b>Avaliações</b></h2></span></div>
+      <div class="avaliacoes-texto-body">
+        <ComponentFeedback_2/>
+        <ComponentFeedback_2/>
+        <ComponentFeedback_2/>
+        <ComponentFeedback_2/>
+      </div>
+    </div>
   </div>
   <div class="div-direita">
-    <div class="container-agendar">
-      <div class="botao1">
-        <Button
-          expended
-          text="Pedir Orçamento"
-          type="primary"
-          onClick={handleNavigateProfessionals}
-        />
+      <div class="container-agendar">
+        <div class="botao1">
+          <Button
+            expended
+            text="Pedir Orçamento"
+            type="primary"
+            onClick={handleNavigateProfessionals}
+          />
+        </div>
+        <div class="botao2">
+          <Button
+            expended
+            text="Fazer agendamento"
+            type="outline"
+            onClick={() => {
+              showCalendar = !showCalendar;
+              console.log("Botão clicado, showCalendar é", showCalendar);
+            }}
+          />
+        </div>
       </div>
-      <div class="botao2">
-        <Button
-          expended
-          text="Fazer agendamento"
-          type="outline"
-          onClick={() => {
-            showCalendar = !showCalendar;
-            console.log("Botão clicado, showCalendar é", showCalendar);
-          }}
-        />
+      {#if showCalendar}
+        <div class="calendario">
+          <Calendar />
+        </div>
+      {/if}
+      <div class="avaliacoes">
+        <h2>Avaliações</h2>
+        <div class="head-avaliacoes">
+          <span class="total-avaliacoes">225 avaliações desse prestador</span>
+          <div class="linha-media-estrela">
+            <img src={star_active} alt="Estrela" />
+            <img src={star_active} alt="Estrela" />
+            <img src={star_active} alt="Estrela" />
+            <img src={star_active} alt="Estrela" />
+            <img src={star_active} alt="Estrela" />
+            4.9
+          </div>
+        </div>
+        <div class="container-avaliacao">
+          <div class="avaliacao">
+            <img src={star_active} alt="Estrela" />
+            <span class="numero-avaliacao" style="font-weight: 600;"
+              >5 <b style="font-weight: 400;color:#777"></b></span
+            >
+            <div class="barra"><div class="preencher"></div></div>
+            <span class="numero-avaliacoes">(174)</span>
+          </div>
+          <div class="avaliacao">
+            <img src={star_active} alt="Estrela" />
+            <span class="numero-avaliacao" style="font-weight: 600;"
+              >4 <b style="font-weight: 400;color:#777"></b></span
+            >
+            <div class="barra">
+              <div class="preencher" style="width: 11%;"></div>
+            </div>
+            <span class="numero-avaliacoes">(36)</span>
+          </div>
+          <div class="avaliacao">
+            <img src={star_active} alt="Estrela" />
+            <span class="numero-avaliacao" style="font-weight: 600;"
+              >3 <b style="font-weight: 400;color:#777"></b></span
+            >
+            <div class="barra">
+              <div class="preencher" style="width: 7%;"></div>
+            </div>
+            <span class="numero-avaliacoes">(12)</span>
+          </div>
+          <div class="avaliacao">
+            <img src={star_active} alt="Estrela" />
+            <span class="numero-avaliacao" style="font-weight: 600;"
+              >2 <b style="font-weight: 400;color:#777"></b></span
+            >
+            <div class="barra">
+              <div class="preencher" style="width: 4%;"></div>
+            </div>
+            <span class="numero-avaliacoes">(2)</span>
+          </div>
+          <div class="avaliacao">
+            <img src={star_active} alt="Estrela" />
+            <span class="numero-avaliacao" style="font-weight: 600;"
+              >1 <b style="font-weight: 400;color:#777"> </b></span
+            >
+            <div class="barra">
+              <div class="preencher" style="width: 1%;"></div>
+            </div>
+            <span class="numero-avaliacoes">(1)</span>
+          </div>
+        </div>
       </div>
     </div>
-    {#if showCalendar}
-      <div class="calendario">
-        <Calendar />
-      </div>
-    {/if}
-    <div class="avaliacoes">
-      <h2>Avaliações</h2>
-      <div class="head-avaliacoes">
-        <span class="total-avaliacoes">225 avaliações desse prestador</span>
-        <div class="linha-media-estrela">
-          <img src={star_active} alt="Estrela" />
-          <img src={star_active} alt="Estrela" />
-          <img src={star_active} alt="Estrela" />
-          <img src={star_active} alt="Estrela" />
-          <img src={star_active} alt="Estrela" />
-          4.9
-        </div>
-      </div>
-      <div class="container-avaliacao">
-        <div class="avaliacao">
-          <img src={star_active} alt="Estrela" />
-          <span class="numero-avaliacao" style="font-weight: 600;"
-            >5 <b style="font-weight: 400;color:#777"></b></span
-          >
-          <div class="barra"><div class="preencher"></div></div>
-          <span class="numero-avaliacoes">(174)</span>
-        </div>
-        <div class="avaliacao">
-          <img src={star_active} alt="Estrela" />
-          <span class="numero-avaliacao" style="font-weight: 600;"
-            >4 <b style="font-weight: 400;color:#777"></b></span
-          >
-          <div class="barra">
-            <div class="preencher" style="width: 11%;"></div>
-          </div>
-          <span class="numero-avaliacoes">(36)</span>
-        </div>
-        <div class="avaliacao">
-          <img src={star_active} alt="Estrela" />
-          <span class="numero-avaliacao" style="font-weight: 600;"
-            >3 <b style="font-weight: 400;color:#777"></b></span
-          >
-          <div class="barra">
-            <div class="preencher" style="width: 7%;"></div>
-          </div>
-          <span class="numero-avaliacoes">(12)</span>
-        </div>
-        <div class="avaliacao">
-          <img src={star_active} alt="Estrela" />
-          <span class="numero-avaliacao" style="font-weight: 600;"
-            >2 <b style="font-weight: 400;color:#777"></b></span
-          >
-          <div class="barra">
-            <div class="preencher" style="width: 4%;"></div>
-          </div>
-          <span class="numero-avaliacoes">(2)</span>
-        </div>
-        <div class="avaliacao">
-          <img src={star_active} alt="Estrela" />
-          <span class="numero-avaliacao" style="font-weight: 600;"
-            >1 <b style="font-weight: 400;color:#777"> </b></span
-          >
-          <div class="barra">
-            <div class="preencher" style="width: 1%;"></div>
-          </div>
-          <span class="numero-avaliacoes">(1)</span>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </body>
 
 <style>
+   
+  .avaliacoes-texto-head{
+    display: flex;
+    padding: 10px;
+  }
+  .avaliacoes-texto{
+    padding:20px;
+  }
+  .botao-portfolio{
+    margin-top: 20px;
+    width: 40vmin;
+  }
   .avaliacao .numero-avaliacao{
     width:6px;
   }
@@ -224,6 +251,7 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 20px;
+
   }
   .avaliacao {
     padding: 5px;
@@ -231,6 +259,7 @@
     align-items: center;
     row-gap: 10px;
     gap: 20px;
+    
   }
   .preencher {
     background: var(--theme-color-secondary);
@@ -248,19 +277,31 @@
   }
   .avaliacoes {
     display: flex;
+    position: sticky;
+    top:32%;
     padding: 20px;
     flex-direction: column;
     margin-left: 5vmin;
     /* align-items: center; */
     justify-content: center;
     margin-top: 10vmin;
+    margin-left: calc(10vmin);
   }
+  
   .botao1,
   .botao2 {
     width: 100%;
   }
+  .corpo-descricao .descricao-texto{
+    font-size: 1rem;
+    position: relative;
+    text-align: justify;
+    padding: 10px;
+  }
   .container-agendar {
     display: flex;
+    position: sticky;
+    top:8%;
     margin-left: 23%;
     margin-top: 25%;
     gap: 20px;
@@ -275,14 +316,15 @@
     box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.03);
   }
   .div-direita {
-    border: 1px solid #ff9811;
+
+    /* border: 1px solid #ff9811; */
   }
   .div-esquerda {
-    border: 1px solid #1dbf73;
+    /* border: 1px solid #1dbf73; */
   }
   .corpo-descricao {
     display: grid;
-    border: 1px solid palegreen;
+    /* border: 1px solid palegreen; */
     /* width: 50%; */
     gap: 30px;
   }
@@ -299,7 +341,7 @@
     display: flex;
     gap: 10px;
     padding: 20px 0px;
-    border: #e4e5e7 1px solid;
+    /* border: #e4e5e7 1px solid; */
   }
   .titulo {
     font-weight: 600;
@@ -310,14 +352,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    border: #e4e5e7 1px solid;
+    /* border: #e4e5e7 1px solid; */
   }
   .nome-localizacao-botao {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
-    border: #e4e5e7 1px solid;
+    /* border: #e4e5e7 1px solid; */
   }
   .foto-nome-verified {
     display: flex;
@@ -325,12 +367,12 @@
     gap: 10px;
     font-size: 1.5rem;
     font-weight: 600;
-    border: #e4e5e7 1px solid;
+    /* border: #e4e5e7 1px solid; */
   }
   .container-foto-nome > img {
     width: 12vmin;
     border-radius: 50%;
-    border: #e4e5e7 1px solid;
+    /* border: #e4e5e7 1px solid; */
   }
   .container-foto-nome {
     display: flex;
@@ -340,7 +382,7 @@
     width: fit-content;
     gap: 18px;
     padding: 30px 0px;
-    border: #4c7ee2 1px solid;
+    /* border: #4c7ee2 1px solid; */
   }
   body {
     padding: 20px 120px;
@@ -366,7 +408,7 @@
     gap: 10px;
     /* width: 60%; */
 
-    border: #1dbf73 1px solid;
+    /* border: #1dbf73 1px solid; */
   }
   .navbar {
     display: flex;
@@ -412,6 +454,15 @@
     }
 
     @media screen and (max-width: 768px) {
+      .botao-portfolio{
+        margin-top: 20px;
+        width: 100%;
+      }
+      .avaliacoes-texto-head{
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+      }
       .calendario{
         margin-right: 05%;
         justify-content: center;
@@ -429,6 +480,7 @@
       }
       .avaliacoes {
         margin-left: 0vmin;
+        
       }
       .container-agendar {
         margin-top: 5%;
@@ -499,6 +551,7 @@
       .corpo-descricao .descricao-texto {
         font-size: 1rem;
         position: static;
+
       }
       .tag {
         font-size: 0.8rem;
