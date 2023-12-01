@@ -49,7 +49,7 @@
         <div class="certificado">
             <div class="certificado-body">
             <SwitchButton/>
-            <span class="frase-certificado"><b>Turbo+</b></span>
+            <span class="frase-certificado"><b>Turbo++</b></span>
             </div>
             <div class="certificado-body">
                 <SwitchButton/>
