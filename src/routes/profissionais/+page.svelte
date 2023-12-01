@@ -81,7 +81,6 @@
         align-items: center;
         width: 100%;
         gap: 1vmin;
-        border: 1px solid aqua
     }
     .card:hover{
         border: 2px solid var(--theme-text-color-secondary);
