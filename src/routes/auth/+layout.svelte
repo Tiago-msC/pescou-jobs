@@ -19,9 +19,7 @@
     </button>
   </div>
 </header>
-
 <slot />
-
 <style>
 
   #header-login {
