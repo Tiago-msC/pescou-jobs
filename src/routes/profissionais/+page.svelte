@@ -74,7 +74,6 @@
 <style>
     .frase-certificado{
         /* text-align: center; */
-        border: 1px solid red;
         width: 50%;
     }
     .certificado-body{
@@ -98,7 +97,6 @@
     .bottom-navbar{
         display: flex;
         width: 100%;
-        border: 1px solid red;
         justify-content: space-between;
         align-items: center;
     }
@@ -225,6 +223,22 @@
     }
 }
 @media screen and (max-width: 600px) {
+    .bottom-navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+    .filtros-profissionais{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        /* border: 1px solid aqua; */
+
+    }
     .lista-de-cards{
         grid-template-columns: repeat(1, 1fr);
         padding: 0 4vmin;
