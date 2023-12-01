@@ -70,7 +70,6 @@
         {/each}
     </div>
 </div>
-
 <style>
     .frase-certificado{
         /* text-align: center; */
