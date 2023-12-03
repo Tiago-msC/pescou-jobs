@@ -65,7 +65,7 @@
     position: absolute;
     z-index: 1;
     top: 20px;
-    right: 5%;
+    right: 3%;
     width: 200px;
     z-index: 3;
     background-color: var(--theme-white-color);
