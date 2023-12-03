@@ -235,8 +235,6 @@
         justify-content: center;
         align-items: center;
         padding: 20px;
-        /* border: 1px solid aqua; */
-
     }
     .lista-de-cards{
         grid-template-columns: repeat(1, 1fr);

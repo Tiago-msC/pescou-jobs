@@ -16,7 +16,7 @@
     window.location.href = "/profissionais";
   };
   let showCalendar = false;
-
+  
 </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -469,7 +469,6 @@
       .avaliacoes-texto_2{
         display: block;
         padding:0px;
-        border: 1px solid red;
       }
       .avaliacoes-texto{
         display: none;
