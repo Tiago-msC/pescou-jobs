@@ -49,7 +49,7 @@
         <div class="certificado">
             <div class="certificado-body">
             <SwitchButton/>
-            <span class="frase-certificado"><b>Turbo++</b></span>
+            <span class="frase-certificado"><b>Turbo+</b></span>
             </div>
             <div class="certificado-body">
                 <SwitchButton/>
@@ -70,8 +70,10 @@
         {/each}
     </div>
 </div>
+
 <style>
     .frase-certificado{
+        /* text-align: center; */
         width: 50%;
     }
     .certificado-body{
@@ -84,6 +86,7 @@
         border: 2px solid var(--theme-text-color-secondary);
         border-radius: 6px;
         transform: scale(1.02);
+        /* transition: 0.3s; */
     }
     .certificado{
         display: flex;
@@ -155,10 +158,11 @@
         width: 100%;
     }
     .card{
+        /* display: block; */
+
         transition: transform 0.3s, border 0.3s;
     }
     .lista-de-cards{
-        border: 1px solid red;
         display: grid;
         grid-template-columns: repeat(4,1fr);
         grid-row-gap: 4vmin;
