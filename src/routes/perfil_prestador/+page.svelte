@@ -455,7 +455,7 @@
       padding: 20px;
     }
     body {
-      padding: 30px 15px;
+      padding: 30px 30px;
     }
     .container {
       width: 100%;
@@ -467,6 +467,7 @@
 
     @media screen and (max-width: 900px) {
       .avaliacoes-texto_2{
+        padding:20px;
         display: block;
         padding:0px;
       }
