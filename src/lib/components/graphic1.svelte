@@ -15,13 +15,13 @@
   datasets: [
     {
 
-      data: [0, 15, 5, ,0, 50],
+      data: [0, 0, 0, ,0, 0],
       borderColor: '#FFF',
       backgroundColor: '#D9D9D9',
     },
     {
       
-      data: [9,0,0,18,24],
+      data: [9,15,5,18,24],
       borderColor: '#FFF',
       backgroundColor: 'rgba(109, 176, 255, 0.50',
     }
@@ -53,10 +53,10 @@
                                 display: false,
                             },
                             ticks: {
-                              font: {
-                                size: 16,
-                                family: 'Poppins'
-                              },
+                              // font: {
+                              //   // size: 16,
+                              //   // family: 'Poppins'
+                              // },
                         },
                       },
                         y: {
@@ -64,10 +64,10 @@
                                 display: true,
                             },
                             ticks: {
-                              font: {
-                                size: 16,
-                                family: 'Poppins'
-                              },
+                              // font: {
+                              //   // size: 16,
+                              //   // family: 'Poppins'
+                              // },
                               padding:20,
                             stepSize: 20,
                             maxTicksLimit: 4,
