@@ -10,18 +10,18 @@
     import SwitchButton from '$lib/components/SwitchButton.svelte';
 
     const cards = [
-    { id: 1, title: 'Card 1' },
-    { id: 2, title: 'Card 2' },
-    { id: 3, title: 'Card 3' },
-    { id: 4, title: 'Card 4' },
-    { id: 5, title: 'Card 5' },
-    { id: 6, title: 'Card 6' },
-    { id: 7, title: 'Card 7' },
-    { id: 8, title: 'Card 8' },
-    { id: 9, title: 'Card 9' },
-    { id: 10, title: 'Card 10' },
-    { id: 11, title: 'Card 11' },
-    { id: 12, title: 'Card 12' },
+    { id:1, title: 'Card 1' },
+    { id:2, title: 'Card 2' },
+    { id:3, title: 'Card 3' },
+    { id:4, title: 'Card 4' },
+    { id:5, title: 'Card 5' },
+    { id:6, title: 'Card 6' },
+    { id:7, title: 'Card 7' },
+    { id:8, title: 'Card 8' },
+    { id:9, title: 'Card 9' },
+    { id:10, title: 'Card 10' },
+    { id:11, title: 'Card 11' },
+    { id:12, title: 'Card 12' },
   ];
     function handleSwitchChange(checked) {
         console.log(checked);
@@ -67,11 +67,12 @@
     <span class="profissionais-achados">20 Eletricistas encontrados em Imbiribeira, Recife, PE</span>
     
     <div class="lista-de-cards">
-        {#each cards as card (card.id)}
+        {#each [1,2,3,4,5,6,7,8,9,10,11,12] as id}
         <div class="card">
-            <a href="/perfil_prestador" style="text-decoration: none; color: var(--theme-text-color-primary) ;"><Card  /></a>
+        <a href="/perfil_prestador" style="text-decoration: none; color: var(--theme-text-color-primary) ;"><Card id={id}/></a>
         </div>
         {/each}
+
     </div>
 </div>
 

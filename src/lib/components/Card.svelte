@@ -1,10 +1,15 @@
 <script>
+// @ts-nocheck
+
     import '../../styles.css';
     import imagem_perfil from '$lib/assets/image-perfil.svg';
     import verified from '$lib/assets/icons/verified.svg';
     import banner from '$lib/assets/foto-banner.svg';
     import estrela from '$lib/assets/icons/star-avaliation.svg';
-    import pin_localizao from '$lib/assets/icons/pin-localizacao.svg'
+    import pin_localizao from '$lib/assets/icons/pin-localizacao.svg';
+    import turbo from '$lib/assets/icons/turbo.svg';
+    // @ts-ignore
+    export let id;
 </script>
 
 
@@ -17,6 +22,7 @@
         <div class="nome-verified">
             <span class="nome-prestador">Marcos Antônio</span>
             <img src={verified} alt="Verificado">
+            <img src={turbo} alt="turbo" class="turbo" >
         </div>
     </div>
     <span class="descricao-prestador">
@@ -39,6 +45,11 @@
 </div>
 
 <style>
+    .turbo{
+        visibility: visible;
+        width: 20px;
+        height: 20px;
+    }
     .imagem-banner2,.imagem-banner{
         width: 100%;
     }
