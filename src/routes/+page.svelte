@@ -5,6 +5,7 @@
   import InputServiceLocation from "$lib/components/input-service-location.svelte";
   import backgroundImage from "$lib/assets/foto-back.png";
   import CardContador from "$lib/components/card-contador.svelte";
+  import Teste from "$lib/components/teste.svelte";
 
   const handleNavigateProfessionals = () => {
     window.location.href = "/profissionais";
@@ -56,9 +57,12 @@
     </div>
   </div>
   <div class="corpo-inferior">
-    
     <CardContador/>
   </div>
+  <div class="div2">
+
+  </div>
+
 <style>
   .corpo-inferior{
     display: flex;

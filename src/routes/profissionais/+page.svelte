@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import '../../styles.css';
     import Card from '$lib/components/Card.svelte'
     import HeaderSearcher from '$lib/components/Header-Searcher.svelte';
@@ -21,7 +23,9 @@
     { id: 11, title: 'Card 11' },
     { id: 12, title: 'Card 12' },
   ];
-    
+    function handleSwitchChange(checked) {
+        console.log(checked);
+    }
 </script>
 
 <HeaderSearcher></HeaderSearcher>
@@ -48,11 +52,11 @@
         </div>
         <div class="certificado">
             <div class="certificado-body">
-            <SwitchButton/>
+            <SwitchButton on:change="{e => handleSwitchChange(e.detail.checked)}" /> <!--Componente de botão para filtrar os cards-->
             <span class="frase-certificado"><b>Turbo+</b></span>
             </div>
             <div class="certificado-body">
-                <SwitchButton/>
+                <SwitchButton on:change="{e => handleSwitchChange(e.detail.checked)}" />
                 <span class="frase-certificado">Certificado PescouJobs</span>
             </div>    
         </div>
