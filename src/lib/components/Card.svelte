@@ -1,4 +1,4 @@
-<script>
+<script lang='ts'>
 // @ts-nocheck
 
     import '../../styles.css';
@@ -8,8 +8,11 @@
     import estrela from '$lib/assets/icons/star-avaliation.svg';
     import pin_localizao from '$lib/assets/icons/pin-localizacao.svg';
     import turbo from '$lib/assets/icons/turbo.svg';
+    import SwitchButton from './SwitchButton.svelte';
+
     // @ts-ignore
     export let id;
+
 </script>
 
 
@@ -22,7 +25,7 @@
         <div class="nome-verified">
             <span class="nome-prestador">Marcos Antônio</span>
             <img src={verified} alt="Verificado">
-            <img src={turbo} alt="turbo" class="turbo" >
+            <img src={turbo} alt="turbo"  class="{id % 2 === 1?'turbo':'turbo2'}">
         </div>
     </div>
     <span class="descricao-prestador">
@@ -45,6 +48,11 @@
 </div>
 
 <style>
+    .turbo2{
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
     .turbo{
         visibility: visible;
         width: 20px;

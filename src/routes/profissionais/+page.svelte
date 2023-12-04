@@ -23,9 +23,14 @@
     { id:11, title: 'Card 11' },
     { id:12, title: 'Card 12' },
   ];
+
+    let check = true;
     function handleSwitchChange(checked) {
-        console.log(checked);
+        check = checked;
+        console.log(check);
+
     }
+    
 </script>
 
 <HeaderSearcher></HeaderSearcher>
@@ -66,14 +71,26 @@
 <div class="bloco-inferior">
     <span class="profissionais-achados">20 Eletricistas encontrados em Imbiribeira, Recife, PE</span>
     
+    {#if check}
+        <div class="lista-de-cards">
+            {#each [1,2,3,4,5,6,7,8,9,10,11,12] as id}
+            <div class="card">
+            <a href="/perfil_prestador" style="text-decoration: none; color: var(--theme-text-color-primary) ;"><Card id={id}/></a>
+            </div>
+            {/each}
+        </div>
+    {/if}
+    {#if check == false}
     <div class="lista-de-cards">
-        {#each [1,2,3,4,5,6,7,8,9,10,11,12] as id}
+        {#each [1,3,5,7,9,11,13,15] as id}
         <div class="card">
         <a href="/perfil_prestador" style="text-decoration: none; color: var(--theme-text-color-primary) ;"><Card id={id}/></a>
         </div>
         {/each}
-
     </div>
+{/if}
+
+
 </div>
 
 <style>
