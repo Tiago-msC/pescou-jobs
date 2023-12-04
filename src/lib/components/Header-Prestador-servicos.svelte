@@ -11,6 +11,7 @@
   import help_icon from "$lib/assets/icons/help-icon.svg";
   import messages_icon from "$lib/assets/icons/messages-mail.svg";
   import SubmenuPerfil from "./submenu-perfil.svelte";
+  
   let show = false;
   const handleNavigateLogin = () => {
     window.location.href = "/auth/login";
