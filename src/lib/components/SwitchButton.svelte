@@ -19,7 +19,7 @@
     .switch { 
     position: relative;
     display: flex;
-    width: 60px;
+    width: 65px;
     height: 34px;
 }
 .switch input {

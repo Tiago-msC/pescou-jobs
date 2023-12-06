@@ -60,10 +60,10 @@
             <SwitchButton on:change="{e => handleSwitchChange(e.detail.checked)}" /> <!--Componente de botão para filtrar os cards-->
             <span class="frase-certificado"><b>Turbo+</b></span>
             </div>
-            <div class="certificado-body">
+            <!-- <div class="certificado-body">
                 <SwitchButton on:change="{e => handleSwitchChange(e.detail.checked)}" />
                 <span class="frase-certificado">Certificado PescouJobs</span>
-            </div>    
+            </div>     -->
         </div>
     </div>
 </div>
