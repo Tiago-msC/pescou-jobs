@@ -189,7 +189,7 @@
         header{
             padding: 0 16px;
             justify-content: center;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             width: 100%;
           }
           
