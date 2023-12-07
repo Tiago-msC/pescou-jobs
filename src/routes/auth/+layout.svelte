@@ -19,16 +19,15 @@
     </button>
   </div>
 </header>
-
 <slot />
-
 <style>
+
   #header-login {
     width: 100%;
     height: 96px;
     padding: 29px 48px;
     display: flex;
-    position: fixed;
+    position: sticky;
     border-bottom: 1px solid #cecece;
     background: #fff;
   }
