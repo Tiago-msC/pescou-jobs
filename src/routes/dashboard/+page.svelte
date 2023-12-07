@@ -462,7 +462,7 @@
     font-size: 1rem;
     color: var(--theme-text-color-secondary);
   }
-@media screen and (max-width:1400px){
+@media screen and (max-width:1600px){
   .head-tabela-servicos .img{
     display: none;
   }

@@ -314,7 +314,7 @@
     display: flex;
     position: sticky;
     top:8%;
-    margin-left: 23%;
+    margin-left: 17%;
     margin-top: 25%;
     gap: 20px;
     flex-direction: column;
@@ -437,6 +437,12 @@
     gap: 23px;
   }
 
+
+  @media (max-width:1500px){
+    .container-agendar{
+      margin-left: 23%
+    }
+  }
   @media (max-width: 1024px) {
     .calendario {
       right: 5%;
